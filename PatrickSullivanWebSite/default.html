@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>Patrick D. Sullivan</title>
+    <meta name="google-site-verification" content="gPY0FAc-sLZ6gfzxtoBIcHjI2GhDgOZcVy7LXglE33w" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link href="Content/onepage-scroll.css" rel="stylesheet" />
+    <link href="Content/bootstrap_slate.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <script>
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-47824136-1', 'pdsullivan.com');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body ng-cloak>
+
+    <div class="container row">
+        <div class="col-xs-12 alert alert-primary topmessage">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            This site is in development, please excuse any bugs (this might just stay here forever. ha. But seriously).
+        </div>
+    </div>
+    <div class="main">
+        <section class="page1">
+            <div class="row container page_container ">
+
+                <div class="jumbotron">
+                    <div class="page-header">
+                        <h1 class="text-right">Patrick Sullivan</h1>
+                        <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-success">Software Engineer</strong></h3>
+                    </div>
+                    <small class="">
+                        Site created by <a href="http://www.pdsullivan.com" target="_blank">Patrick Sullivan (me)</a>. Using <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" target="_blank">One Page Scroll</a> and <a href="http://getbootstrap.com/" target="_blank"> Bootstrap</a>.
+                    </small>
+                </div>
+            </div>
+        </section>
+
+        <section class="page2">
+            <div class="container page_container">
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-8 ">
+                        <h1>Hello,</h1>
+                        <p class="lead ">I am Patrick Sullivan and I live in Birmingham, Alabama.  Currently I work at <a href="http://www.greenwaymedical.com/" target="_blank">Greenway</a> <small>(formerly  <a href="http://www.successehs.com" target="_blank">SuccessEHS</a>)</small> where I do mostly desktop development using Windows Forms and WPF coding in <code>C#</code>.  Also at my current position I work with Oracle and <code>PL/SQL</code>.  </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Resume</button>
+                        <button type="button" class="btn btn-link"><a href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a></button>
+                        <button type="button" class="btn btn-link"><a href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOveflow Account</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page3" ng-controller="linksController">
+            <div class="container page_container row">
+                <h1>Check out some of these links...if you want.</h1>
+                <p class="lead">I like to call these "Links".</p>
+                <div class="container">
+                    <div  ng-repeat="link in links">
+                        <h3><a href="{{link.url}}" target="_blank">{{link.desc}}</a></h3>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+
+    <!-- Resume Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Under Construction</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning">
+                        <p><span class="glyphicon glyphicon-warning-sign"></span> Sorry, thats not done yet!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/jquery.onepage-scroll.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/site.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/linksController.js"></script>
+    <script src="app/services/linksService.js"></script>
+</body>
+</html>
