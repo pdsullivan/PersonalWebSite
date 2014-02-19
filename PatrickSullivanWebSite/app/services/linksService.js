@@ -10,9 +10,7 @@
         };
 
         linksFactory.selectLink = function (id) {
-            //
-            // $http.put("/flights/select/3", id)
-            //
+
             return true;
         };
         return linksFactory;

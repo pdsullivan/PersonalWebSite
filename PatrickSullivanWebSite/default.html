@@ -23,6 +23,25 @@
 </head>
 
 <body ng-cloak>
+    <!-- Resume Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Under Construction</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning">
+                        <p><span class="glyphicon glyphicon-warning-sign"></span> Sorry, thats not done yet!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container row">
         <div class="col-xs-12 alert alert-primary topmessage">
@@ -55,9 +74,9 @@
                     <div class="col-xs-8 ">
                         <h1>Hello,</h1>
                         <p class="lead ">I am Patrick Sullivan and I live in Birmingham, Alabama.  Currently I work at <a href="http://www.greenwaymedical.com/" target="_blank">Greenway</a> <small>(formerly  <a href="http://www.successehs.com" target="_blank">SuccessEHS</a>)</small> where I do mostly desktop development using Windows Forms and WPF coding in <code>C#</code>.  Also at my current position I work with Oracle and <code>PL/SQL</code>.  </p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Resume</button>
-                        <button type="button" class="btn btn-link"><a href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a></button>
-                        <button type="button" class="btn btn-link"><a href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOveflow Account</a></button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Resume</button>
+                        <a class="btn btn-link" href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a>
+                        <a class="btn btn-link" href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOveflow Account</a>
                     </div>
                 </div>
             </div>
@@ -65,40 +84,20 @@
 
         <section class="page3" ng-controller="linksController">
             <div class="container page_container row">
-                <h1>Check out some of these links...if you want.</h1>
-                <p class="lead">I like to call these "Links".</p>
+                <h1>Check out some of these links ... if you want ...</h1>
                 <div class="container">
                     <div  ng-repeat="link in links">
-                        <h3><a href="{{link.url}}" target="_blank">{{link.desc}}</a></h3>
+                        <h3><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></h3>
                     </div>
                 </div>
         </section>
     </div>
 
 
-    <!-- Resume Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Under Construction</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-warning">
-                        <p><span class="glyphicon glyphicon-warning-sign"></span> Sorry, thats not done yet!</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <script src="Scripts/jquery-2.1.0.min.js"></script>
     <script src="Scripts/jquery.onepage-scroll.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/site.js"></script>
     <script src="app/app.js"></script>

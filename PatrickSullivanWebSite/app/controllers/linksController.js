@@ -3,24 +3,22 @@
     var linksController = function ($scope, linksService, $timeout) {
 
 
-        $scope.links =  [
-                {
-                    "desc": "Podcast by Jesse Liberty",
-                    "url": "https://itunes.apple.com/us/podcast/id393751871"
-                },
-                {
-                    "desc": "9to5Mac Apple Intelligence",
-                    "url": "http://9to5mac.com/"
-                },
-                {
-                    "desc":"StackExchange Blog",
-                    "url": "http://blog.stackexchange.com/"
-                },
-                {
-                    "desc": "StackExchange Podcast",
-                    "url": "http://blog.stackexchange.com/"
-                }
-            ];
+        var onError = function () {
+            alert("error!!");
+        };
+
+        var onLinks = function (response) {
+            $scope.links = response.data;
+        };
+
+
+        var init = function () {
+            $scope.links = linksService.getLinks().then(onLinks, onError);
+        };
+
+
+        init();
+
 
         
     };
