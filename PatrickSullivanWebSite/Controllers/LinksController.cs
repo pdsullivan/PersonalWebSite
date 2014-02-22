@@ -27,7 +27,11 @@ namespace PatrickSullivanWebSite.Controllers
                             Desc = "StackExchange Blog"},
 
                 new Link(){Url = "http://blog.stackoverflow.com/category/podcasts/" , 
-                            Desc = "StackExchange Podcast"}
+                            Desc = "StackExchange Podcast"},
+
+                new Link(){Url = "https://github.com/pdsullivan", 
+                            Desc = "My Github Account", 
+                            Text = " (Not much on there at the moment)"}
             };
             return Ok(db);
         }

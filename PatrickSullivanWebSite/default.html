@@ -23,18 +23,19 @@
 </head>
 
 <body ng-cloak>
+
     <!-- Resume Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Under Construction</h4>
+                    <h4 class="modal-title" id="myModalLabel">Resume</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="alert alert-warning">
-                        <p><span class="glyphicon glyphicon-warning-sign"></span> Sorry, thats not done yet!</p>
-                    </div>
+
+                    <p><strong id="mobilePDFMessage">Looks like your using a small browser. </strong>To see resume in full page <a class="btn btn-primary" href="http://www.pdsullivan.com/PatrickSullivan Resume.pdf" target="_blank">click here</a></p>
+                    <div style="height: 50%;" id="pdfRenderer"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -43,13 +44,43 @@
         </div>
     </div>
 
-    <div class="container row">
-        <div class="col-xs-12 alert alert-primary topmessage">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            This site is in development, please excuse any bugs (this might just stay here forever. ha. But seriously).
+    <div id="navbarContainer" class="container row">
+        <div class="col-xs-12  topmessage">
+            <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            This site is in development, please excuse any bugs (this might just stay here forever. ha. But seriously).-->
+            <!--Nav-->
+            <nav class=".topmessage navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li id="homeNavListItem" class="active"><a id="homeNavItem" href="#">Home</a></li>
+                            <li id="aboutNavListItem"><a id="aboutNavItem" href="#">About</a></li>
+                            <li id="linksNavListItem"><a id="linksNavItem" href="#">Links</a></li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
         </div>
     </div>
+
+
+
+
     <div class="main">
+
+
+        <!--Page 1-->
         <section class="page1">
             <div class="row container page_container ">
 
@@ -65,6 +96,7 @@
             </div>
         </section>
 
+        <!--Page 2-->
         <section class="page2">
             <div class="container page_container">
                 <div class="row">
@@ -82,12 +114,13 @@
             </div>
         </section>
 
+        <!--Page 3-->
         <section class="page3" ng-controller="linksController">
             <div class="container page_container row">
-                <h1>Check out some of these links ... if you want ...</h1>
+                <h1>Check out some of these links...if you want...</h1>
                 <div class="container">
-                    <div  ng-repeat="link in links">
-                        <h3><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></h3>
+                    <div ng-repeat="link in links">
+                        <h4><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></h4>
                     </div>
                 </div>
         </section>
@@ -103,5 +136,6 @@
     <script src="app/app.js"></script>
     <script src="app/controllers/linksController.js"></script>
     <script src="app/services/linksService.js"></script>
+    <script src="Scripts/pdfobject.js"></script>
 </body>
 </html>

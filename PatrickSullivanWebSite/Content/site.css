@@ -1,19 +1,21 @@
 ﻿ .topmessage {
-            position: absolute;
-            background-color: #7a8288;
-            opacity: .8;
-            z-index: 1;
-        }
+    position: absolute;
+    margin-top:20px;
+    z-index: 1;
+}
 
-        .main section .page_container {
-            position: relative;
-            top: 25%;
-            margin: 0 auto 0;
-            max-width: 950px;
-            z-index: 3;
-        }
+.main section .page_container {
+    position: relative;
+    top: 20%;
+    margin: 0 auto 0;
+    max-width: 950px;
+    z-index: 3;
+}
 
-        .main section.page1 {
-            background-color: #7a8288;
-            background-color: white;
-        }
+.main section.page1 {
+    background-color: #7a8288;
+    background-color: white;
+}
+.modal-body {
+    max-height: 1000px;
+}
