@@ -25,7 +25,7 @@ $(function () {
             }
         },
         loop: true,
-        responsiveFallback: 980
+        responsiveFallback: 650
     });
 
     var pdf = new PDFObject({
@@ -57,7 +57,7 @@ $(function () {
 
 function ShowHideBasedOnSize() {
     var width = $(window).width();
-    if (width < 980) {
+    if (width < 650) {
         $('#navbarContainer').hide();
         $('#pdfRenderer').hide();
         $('#mobilePDFMessage').show();

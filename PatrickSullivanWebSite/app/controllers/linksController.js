@@ -11,9 +11,18 @@
             $scope.links = response.data;
         };
 
+        var onPodcasts = function (response) {
+            $scope.podcasts = response.data;
+        };
+
+        var onDevLinks = function (response) {
+            $scope.devLinks = response.data;
+        };
 
         var init = function () {
             $scope.links = linksService.getLinks().then(onLinks, onError);
+            $scope.podcasts = linksService.getPodcasts().then(onPodcasts, onError);
+            $scope.devLinks = linksService.getDevLinks().then(onDevLinks, onError);
         };
 
 

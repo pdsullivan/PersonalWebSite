@@ -4756,7 +4756,7 @@ a.list-group-item-danger.active:focus {
   margin-bottom: 0;
   line-height: 1.3;
 }
-.panel {
+/*.panel {
   margin-bottom: 20px;
   background-color: #2e3338;
   border: 1px solid transparent;
@@ -5038,7 +5038,8 @@ a.list-group-item-danger.active:focus {
 }
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: rgba(0, 0, 0, 0.6);
-}
+}*/
+
 .well {
   min-height: 20px;
   padding: 19px;

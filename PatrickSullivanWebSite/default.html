@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
-    <title>Patrick D. Sullivan</title>
+    <title>Patrick Sullivan | Do or do not. There is no try. </title>
     <meta name="google-site-verification" content="gPY0FAc-sLZ6gfzxtoBIcHjI2GhDgOZcVy7LXglE33w" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="Content/onepage-scroll.css" rel="stylesheet" />
     <link href="Content/bootstrap_slate.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
@@ -24,25 +26,7 @@
 
 <body ng-cloak>
 
-    <!-- Resume Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Resume</h4>
-                </div>
-                <div class="modal-body">
 
-                    <p><strong id="mobilePDFMessage">Looks like your using a small browser. </strong>To see resume in full page <a class="btn btn-primary" href="http://www.pdsullivan.com/PatrickSullivan Resume.pdf" target="_blank">click here</a></p>
-                    <div style="height: 50%;" id="pdfRenderer"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="navbarContainer" class="container row">
         <div class="col-xs-12  topmessage">
@@ -59,13 +43,20 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                        <!--<a class="navbar-brand" href="#">Welcome</a>-->
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li id="homeNavListItem" class="active"><a id="homeNavItem" href="#">Home</a></li>
-                            <li id="aboutNavListItem"><a id="aboutNavItem" href="#">About</a></li>
-                            <li id="linksNavListItem"><a id="linksNavItem" href="#">Links</a></li>
+                            <li id="homeNavListItem" class="active">
+                                <a id="homeNavItem" href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+                            </li>
+                            <li id="aboutNavListItem">
+                                <a id="aboutNavItem" href="#"><span class="glyphicon glyphicon-user"></span> About</a>
+                            </li>
+                            <li id="linksNavListItem">
+                                <a id="linksNavItem" href="#"><span class="glyphicon glyphicon-headphones"></span> Other Stuff</a>
+                            </li>
 
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -73,9 +64,6 @@
             </nav>
         </div>
     </div>
-
-
-
 
     <div class="main">
 
@@ -86,6 +74,7 @@
 
                 <div class="jumbotron">
                     <div class="page-header">
+                        
                         <h1 class="text-right">Patrick Sullivan</h1>
                         <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-success">Software Engineer</strong></h3>
                     </div>
@@ -108,7 +97,7 @@
                         <p class="lead ">I am Patrick Sullivan and I live in Birmingham, Alabama.  Currently I work at <a href="http://www.greenwaymedical.com/" target="_blank">Greenway</a> <small>(formerly  <a href="http://www.successehs.com" target="_blank">SuccessEHS</a>)</small> where I do mostly desktop development using Windows Forms and WPF coding in <code>C#</code>.  Also at my current position I work with Oracle and <code>PL/SQL</code>.  </p>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Resume</button>
                         <a class="btn btn-link" href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a>
-                        <a class="btn btn-link" href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOveflow Account</a>
+                        <a class="btn btn-link" href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOverflow Account</a>
                     </div>
                 </div>
             </div>
@@ -116,14 +105,86 @@
 
         <!--Page 3-->
         <section class="page3" ng-controller="linksController">
-            <div class="container page_container row">
-                <h1>Check out some of these links...if you want...</h1>
-                <div class="container">
-                    <div ng-repeat="link in links">
-                        <h4><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></h4>
+            <div class="container page_container">
+                <h1>Check out some of these links...</h1>
+                <div class="well">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8 panel panel-default">
+                            <div class="panel-heading"><h4>Good Tech Podcasts&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4></div>
+                            <div class="panel-body">
+                                <!--<div ng-repeat="podcast in podcasts">-->
+                                <p class="ng-binding">
+                                    <a href="http://dotnetrocks.com/" target="_blank" class="ng-binding">.NET Rocks!</a>
+                                </p>
+                                <p class="ng-binding">
+                                    <a href="https://itunes.apple.com/us/podcast/id393751871" target="_blank" class="ng-binding">Yet Another Podcast</a> by <a href="https://jesseliberty.com/" target="_blank" class="ng-binding">Jesse Liberty</a>
+                                </p>
+                                <p class="ng-binding">
+                                    <a href="http://blog.stackoverflow.com/category/podcasts/" target="_blank" class="ng-binding">StackExchange Podcast</a>
+                                </p>
+                                <p class="ng-binding">
+                                    <a href="http://herdingcode.com/" target="_blank" class="ng-binding">Herding Code Podcast</a>
+                                </p>
+
+                                <!--<p><a href="{{link.url}}" target="_blank">{{podcast.desc}}</a>{{podcast.text}}<a href="{{podcast.authorUrl}}" target="_blank">{{podcast.author}}</a></p>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4  panel panel-default">
+                            <div class="panel-heading"><h4>Other Stuff&nbsp;<span class="badge">{{links.length}}</span>&nbsp;<small><a href="/api/links" target="_blank">api</a></small></h4></div>
+                            <div class="panel-body">
+                                <!--<div ng-repeat="link in links">-->
+
+
+                                <p class="ng-binding"><a href="http://9to5mac.com/" target="_blank" class="ng-binding">9to5Mac</a> Apple Intelligence<a href="" target="_blank" class="ng-binding"></a></p>
+
+                                <p class="ng-binding"><a href="http://blog.stackexchange.com/" target="_blank" class="ng-binding">StackExchange Blog</a><a href="" target="_blank" class="ng-binding"></a></p>
+
+                                <p class="ng-binding"><a href="https://github.com/pdsullivan" target="_blank" class="ng-binding">My Github Account</a> (Not much on there at the moment)<a href="" target="_blank" class="ng-binding"></a></p>
+
+
+                                <!--<p><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></p>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4  panel panel-default">
+                            <div class="panel-heading"><h4>Dev Resources&nbsp;<span class="badge">{{devLinks.length}}</span>&nbsp;<small><a href="/api/devLinks" target="_blank">api</a></small></h4></div>
+                            <div class="panel-body">
+                                <!--<div ng-repeat="devLink in devLinks">-->
+
+                                <p class="ng-binding"><a href="http://webdevchecklist.com/" target="_blank" class="ng-binding">Web Development Checklist</a><a href="" target="_blank" class="ng-binding"></a></p>
+                                <p class="ng-binding"><a href="http://sidewaffle.com/" target="_blank" class="ng-binding">SideWaffle</a><a href="" target="_blank" class="ng-binding"></a></p>
+
+                                <!--<p><a href="{{devLink.url}}" target="_blank">{{devLink.desc}}</a>{{devLink.text}}<a href="{{devLink.authorUrl}}" target="_blank">{{devLink.author}}</a></p>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
         </section>
+    </div>
+
+    <!-- Resume Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Resume</h4>
+                </div>
+                <div class="modal-body">
+
+                    <p><strong id="mobilePDFMessage">Looks like your using a mobile (smaller) browser. </strong>To see resume in full page <a class="btn btn-primary" href="http://www.pdsullivan.com/PatrickSullivan Resume.pdf" target="_blank">click here</a></p>
+                    <div style="height: 50%;" id="pdfRenderer"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
