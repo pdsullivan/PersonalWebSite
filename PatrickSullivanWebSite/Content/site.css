@@ -1,6 +1,6 @@
 ﻿ .topmessage {
     position: absolute;
-    margin-top:20px;
+    margin-top:0;
     z-index: 1;
 }
 
@@ -9,10 +9,13 @@
     top: 20%;
     margin: 0 auto 0;
     max-width: 950px;
-    min-height: 700px;
     z-index: 3;
 }
+.onepage-wrapper .section {
 
+min-height: 675px;
+
+}
 .main section.page1 {
     background-color: #7a8288;
     background-color: white;

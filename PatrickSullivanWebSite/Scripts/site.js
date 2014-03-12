@@ -38,7 +38,7 @@ $(function () {
 
     //size functions
     $(window).resize(function () {
-        $(".main").moveTo(1);
+        //$(".main").moveTo(1);
         ShowHideBasedOnSize();
     });
 
@@ -58,12 +58,12 @@ $(function () {
 function ShowHideBasedOnSize() {
     var width = $(window).width();
     if (width < 650) {
-        $('#navbarContainer').hide();
+        //$('#navbarContainer').hide();
         $('#pdfRenderer').hide();
         $('#mobilePDFMessage').show();
     }
     else {
-        $('#navbarContainer').show();
+        //$('#navbarContainer').show();
         $('#pdfRenderer').show();
         $('#mobilePDFMessage').hide();
     }

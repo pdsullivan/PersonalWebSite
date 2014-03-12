@@ -7,7 +7,7 @@
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="Content/onepage-scroll.css" rel="stylesheet" />
-    <link href="Content/bootstrap_slate.css" rel="stylesheet" />
+    <link href="Content/bootstrap.custom.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
     <script>
 
@@ -27,13 +27,9 @@
 <body ng-cloak>
 
     <div id="navbarContainer" class="container row">
-        <div class="col-xs-12  topmessage">
-            <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            This site is in development, please excuse any bugs (this might just stay here forever. ha. But seriously).-->
-            <!--Nav-->
-            <nav class=".topmessage navbar navbar-default" role="navigation">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="  ">
+            <nav class=" navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -41,11 +37,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <!--<a class="navbar-brand" href="#">Welcome</a>-->
+                        <a class="navbar-brand" href="#">Patrick Sullivan</a>
                     </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav navbar-right">
                             <li id="homeNavListItem" class="active">
                                 <a id="homeNavItem" href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
                             </li>
@@ -55,10 +50,11 @@
                             <li id="linksNavListItem">
                                 <a id="linksNavItem" href="#"><span class="glyphicon glyphicon-headphones"></span> Other Stuff</a>
                             </li>
-
                         </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
+                        <ul class="nav navbar-nav">
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </div>
@@ -67,14 +63,14 @@
 
 
         <!--Page 1-->
-        <section class="page1">
+        <section class="page1" style="background-color: #ffffff; ">
             <div class="row container page_container ">
 
                 <div class="jumbotron">
                     <div class="page-header">
                         
                         <h1 class="text-right">Patrick Sullivan</h1>
-                        <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-success">Software Engineer</strong></h3>
+                        <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-primary">Software Engineer</strong></h3>
                     </div>
                     <small class="">
                         Site created by <a href="http://www.pdsullivan.com" target="_blank">Patrick Sullivan (me)</a>. Using <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" target="_blank">One Page Scroll</a> and <a href="http://getbootstrap.com/" target="_blank"> Bootstrap</a>.
@@ -105,62 +101,65 @@
         <section class="page3" ng-controller="linksController">
             <div class="container page_container">
                 <h1>Check out some of these links...</h1>
-                <div class="well">
                     <div class="row">
-                        <div class="col-xs-12 col-md-8 panel panel-default">
-                            <div class="panel-heading"><h4>Good Tech Podcasts&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4></div>
-                            <div class="panel-body">
-                                <!--<div ng-repeat="podcast in podcasts">-->
-                                <p class="ng-binding">
-                                    <a href="http://dotnetrocks.com/" target="_blank" class="ng-binding">.NET Rocks!</a>
-                                </p>
-                                <p class="ng-binding">
-                                    <a href="https://itunes.apple.com/us/podcast/id393751871" target="_blank" class="ng-binding">Yet Another Podcast</a> by <a href="https://jesseliberty.com/" target="_blank" class="ng-binding">Jesse Liberty</a>
-                                </p>
-                                <p class="ng-binding">
-                                    <a href="http://blog.stackoverflow.com/category/podcasts/" target="_blank" class="ng-binding">StackExchange Podcast</a>
-                                </p>
-                                <p class="ng-binding">
-                                    <a href="http://herdingcode.com/" target="_blank" class="ng-binding">Herding Code Podcast</a>
-                                </p>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h4>Some podcasts listen to&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4></div>
+                                <div class="panel-body">
+                                    <!--<div ng-repeat="podcast in podcasts">-->
+                                    <p class="ng-binding">
+                                        <a href="http://dotnetrocks.com/" target="_blank" class="ng-binding">.NET Rocks!</a>
+                                    </p>
+                                    <p class="ng-binding">
+                                        <a href="https://itunes.apple.com/us/podcast/id393751871" target="_blank" class="ng-binding">Yet Another Podcast</a> by <a href="https://jesseliberty.com/" target="_blank" class="ng-binding">Jesse Liberty</a>
+                                    </p>
+                                    <p class="ng-binding">
+                                        <a href="http://blog.stackoverflow.com/category/podcasts/" target="_blank" class="ng-binding">StackExchange Podcast</a>
+                                    </p>
+                                    <p class="ng-binding">
+                                        <a href="http://herdingcode.com/" target="_blank" class="ng-binding">Herding Code Podcast</a>
+                                    </p>
 
-                                <!--<p><a href="{{link.url}}" target="_blank">{{podcast.desc}}</a>{{podcast.text}}<a href="{{podcast.authorUrl}}" target="_blank">{{podcast.author}}</a></p>-->
-                                <!--</div>-->
+                                    <!--<p><a href="{{link.url}}" target="_blank">{{podcast.desc}}</a>{{podcast.text}}<a href="{{podcast.authorUrl}}" target="_blank">{{podcast.author}}</a></p>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="  panel panel-default">
+                                <div class="panel-heading"><h4>Other Stuff&nbsp;<span class="badge">{{links.length}}</span>&nbsp;<small><a href="/api/links" target="_blank">api</a></small></h4></div>
+                                <div class="panel-body">
+                                    <!--<div ng-repeat="link in links">-->
+
+
+                                    <p class="ng-binding"><a href="http://9to5mac.com/" target="_blank" class="ng-binding">9to5Mac</a> Apple Intelligence<a href="" target="_blank" class="ng-binding"></a></p>
+
+                                    <p class="ng-binding"><a href="http://blog.stackexchange.com/" target="_blank" class="ng-binding">StackExchange Blog</a><a href="" target="_blank" class="ng-binding"></a></p>
+
+                                    <p class="ng-binding"><a href="https://github.com/pdsullivan" target="_blank" class="ng-binding">My Github Account</a> (Not much on there at the moment)<a href="" target="_blank" class="ng-binding"></a></p>
+
+
+                                    <!--<p><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></p>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="  panel panel-default">
+                                <div class="panel-heading"><h4>Dev Resources&nbsp;<span class="badge">{{devLinks.length}}</span>&nbsp;<small><a href="/api/devLinks" target="_blank">api</a></small></h4></div>
+                                <div class="panel-body">
+                                    <!--<div ng-repeat="devLink in devLinks">-->
+
+                                    <p class="ng-binding"><a href="http://webdevchecklist.com/" target="_blank" class="ng-binding">Web Development Checklist</a><a href="" target="_blank" class="ng-binding"></a></p>
+                                    <p class="ng-binding"><a href="http://sidewaffle.com/" target="_blank" class="ng-binding">SideWaffle</a><a href="" target="_blank" class="ng-binding"></a></p>
+
+                                    <!--<p><a href="{{devLink.url}}" target="_blank">{{devLink.desc}}</a>{{devLink.text}}<a href="{{devLink.authorUrl}}" target="_blank">{{devLink.author}}</a></p>-->
+                                    <!--</div>-->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-4  panel panel-default">
-                            <div class="panel-heading"><h4>Other Stuff&nbsp;<span class="badge">{{links.length}}</span>&nbsp;<small><a href="/api/links" target="_blank">api</a></small></h4></div>
-                            <div class="panel-body">
-                                <!--<div ng-repeat="link in links">-->
-
-
-                                <p class="ng-binding"><a href="http://9to5mac.com/" target="_blank" class="ng-binding">9to5Mac</a> Apple Intelligence<a href="" target="_blank" class="ng-binding"></a></p>
-
-                                <p class="ng-binding"><a href="http://blog.stackexchange.com/" target="_blank" class="ng-binding">StackExchange Blog</a><a href="" target="_blank" class="ng-binding"></a></p>
-
-                                <p class="ng-binding"><a href="https://github.com/pdsullivan" target="_blank" class="ng-binding">My Github Account</a> (Not much on there at the moment)<a href="" target="_blank" class="ng-binding"></a></p>
-
-
-                                <!--<p><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></p>-->
-                                <!--</div>-->
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4  panel panel-default">
-                            <div class="panel-heading"><h4>Dev Resources&nbsp;<span class="badge">{{devLinks.length}}</span>&nbsp;<small><a href="/api/devLinks" target="_blank">api</a></small></h4></div>
-                            <div class="panel-body">
-                                <!--<div ng-repeat="devLink in devLinks">-->
-
-                                <p class="ng-binding"><a href="http://webdevchecklist.com/" target="_blank" class="ng-binding">Web Development Checklist</a><a href="" target="_blank" class="ng-binding"></a></p>
-                                <p class="ng-binding"><a href="http://sidewaffle.com/" target="_blank" class="ng-binding">SideWaffle</a><a href="" target="_blank" class="ng-binding"></a></p>
-
-                                <!--<p><a href="{{devLink.url}}" target="_blank">{{devLink.desc}}</a>{{devLink.text}}<a href="{{devLink.authorUrl}}" target="_blank">{{devLink.author}}</a></p>-->
-                                <!--</div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </div>
