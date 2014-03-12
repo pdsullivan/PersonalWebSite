@@ -9,6 +9,21 @@ using System.Web.SessionState;
 
 namespace PatrickSullivanWebSite
 {
+    /*
+    public class StoreDB 
+    {
+        public BiggyList<Product> Products;
+        public BiggyList<Customer> Customer;
+        
+        public StoreDB()
+        {
+            Products = new BiggyList<Product>(dbPath: HttpRuntime.AppDomainAppPath);
+            Customers = new BiggyList<Customerss>(dbPath: HttpRuntime.AppDomainAppPath);
+        }
+    }
+    
+    */
+    
     public class Global : System.Web.HttpApplication
     {
 
