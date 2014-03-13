@@ -12,22 +12,10 @@ namespace PatrickSullivanWebSite.Controllers
     {
         public IHttpActionResult GetAllPodcasts()
         {
-            var db = new List<Link>()
-            {
-                new Link() {Url = "http://dotnetrocks.com/", Desc = ".Net Rocks"},
-                new Link(){Url = "https://itunes.apple.com/us/podcast/id393751871" , 
-                            Desc = "Yet Another Podcast",
-                            Text = " by ",
-                            Author = "Jesse Liberty",
-                            AuthorUrl = "https://jesseliberty.com/"},
-
-                new Link(){Url = "http://blog.stackoverflow.com/category/podcasts/" , 
-                            Desc = "StackExchange Podcast"},
-                
-                new Link(){Url = "http://herdingcode.com/" , 
-                            Desc = "Herding Code Podcast"}
-
-            };
+            var db = new List<Link>();
+            db = (from x in Global.SiteDB.Links
+                  where x.Type == "podcast"
+                  select x).ToList();
             return Ok(db);
         }
     }

@@ -12,19 +12,11 @@ namespace PatrickSullivanWebSite.Controllers
     {
         public IHttpActionResult GetAllLinks()
         {
-            var db = new List<Link>()
-            {
+            var db = new List<Link>();
+            db = (from x in Global.SiteDB.Links
+                  where x.Type == "link"
+                  select x).ToList();
 
-                new Link(){Url = "http://9to5mac.com/" , 
-                            Desc = "9to5Mac", Text = " Apple Intelligence"},
-
-                new Link(){Url = "http://blog.stackexchange.com/" , 
-                            Desc = "StackExchange Blog"},
-
-                new Link(){Url = "https://github.com/pdsullivan", 
-                            Desc = "My Github Account", 
-                            Text = " (Not much on there at the moment)"}
-            };
             return Ok(db);
         }
 

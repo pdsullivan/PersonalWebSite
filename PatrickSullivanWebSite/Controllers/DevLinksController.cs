@@ -12,15 +12,10 @@ namespace PatrickSullivanWebSite.Controllers
     {
         public IHttpActionResult GetAllDevLinks()
         {
-            var db = new List<Link>()
-            {               
-
-                new Link(){Url = "http://webdevchecklist.com/" , 
-                            Desc = "Web Development Checklist"},
-                new Link(){Url = "http://sidewaffle.com/",
-                            Desc= "SideWaffle"}
-
-            };
+            var db = new List<Link>();
+            db = (from x in Global.SiteDB.Links
+                  where x.Type == "dev"
+                  select x).ToList();
             return Ok(db);
         }
     }

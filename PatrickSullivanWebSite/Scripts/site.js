@@ -1,6 +1,8 @@
 ﻿
 $(function () {
 
+    var smallSize = 650;
+
     ShowHideBasedOnSize();
 
     $(".main").onepage_scroll({
@@ -25,7 +27,7 @@ $(function () {
             }
         },
         loop: true,
-        responsiveFallback: 650
+        responsiveFallback: smallSize
     });
 
     var pdf = new PDFObject({
@@ -38,34 +40,38 @@ $(function () {
 
     //size functions
     $(window).resize(function () {
-        //$(".main").moveTo(1);
         ShowHideBasedOnSize();
     });
 
 
     $("#homeNavItem").click(function () {
-        $(".main").moveTo(1);
+        $('#homeNavListItem').addClass('active');
+        $('.main').moveTo(1);
     });
     $("#aboutNavItem").click(function () {
+        $('#aboutNavListItem').addClass('active');
         $(".main").moveTo(2);
     });
     $("#linksNavItem").click(function () {
+        $('#linksNavListItem').addClass('active');
         $(".main").moveTo(3);
     });
+    $("#brandNavButton").click(function () {
+        $(".main").moveTo(1);
+    });
 
+
+    function ShowHideBasedOnSize() {
+        var width = $(window).width();
+        if (width < smallSize) {
+            $('#pdfRenderer').hide();
+            $('#mobilePDFMessage').show();
+        }
+        else {
+            $('#pdfRenderer').show();
+            $('#mobilePDFMessage').hide();
+        }
+    };
 });
 
-function ShowHideBasedOnSize() {
-    var width = $(window).width();
-    if (width < 650) {
-        //$('#navbarContainer').hide();
-        $('#pdfRenderer').hide();
-        $('#mobilePDFMessage').show();
-    }
-    else {
-        //$('#navbarContainer').show();
-        $('#pdfRenderer').show();
-        $('#mobilePDFMessage').hide();
-    }
-};
 
