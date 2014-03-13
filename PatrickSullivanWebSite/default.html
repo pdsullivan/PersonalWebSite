@@ -46,6 +46,9 @@
                             <li id="aboutNavListItem">
                                 <a id="aboutNavItem" href="#"><span class="glyphicon glyphicon-user"></span> About</a>
                             </li>
+                            <li id="workNavListItem">
+                                <a id="workNavItem" href="#"><span class="glyphicon glyphicon-briefcase"></span> Work</a>
+                            </li>
                             <li id="linksNavListItem">
                                 <a id="linksNavItem" href="#"><span class="glyphicon glyphicon-send"></span> Other Stuff</a>
                             </li>
@@ -67,7 +70,7 @@
 
                 <div class="jumbotron">
                     <div class="page-header">
-                        
+
                         <h1 class="text-right">Patrick Sullivan</h1>
                         <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-primary">Software Engineer</strong></h3>
                     </div>
@@ -95,7 +98,7 @@
                             <code>C#</code>.  Also at my current position I work with Oracle and <code>PL/SQL</code>.
                         </p>
                         <p class="lead">
-                            I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website. 
+                            I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Resume</button>
                         <a class="btn btn-link" href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a>
@@ -106,71 +109,90 @@
         </section>
 
         <!--Page 3-->
-        <section class="page3" ng-controller="linksController">
+        <section class="page3" >
             <div class="container page_container">
                 <h1>Check out some of these links...</h1>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading"><h4>Some Podcasts I Listen To&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4></div>
-                                <div class="panel-body">
-                                    <!--<div ng-repeat="podcast in podcasts">-->
-                                    <p class="ng-binding">
-                                        <a href="http://dotnetrocks.com/" target="_blank" class="ng-binding">.NET Rocks!</a>
-                                    </p>
-                                    <p class="ng-binding">
-                                        <a href="https://itunes.apple.com/us/podcast/id393751871" target="_blank" class="ng-binding">Yet Another Podcast</a> by <a href="https://jesseliberty.com/" target="_blank" class="ng-binding">Jesse Liberty</a>
-                                    </p>
-                                    <p class="ng-binding">
-                                        <a href="http://blog.stackoverflow.com/category/podcasts/" target="_blank" class="ng-binding">StackExchange Podcast</a>
-                                    </p>
-                                    <p class="ng-binding">
-                                        <a href="http://herdingcode.com/" target="_blank" class="ng-binding">Herding Code Podcast</a>
-                                    </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
 
-                                    <!--<p><a href="{{link.url}}" target="_blank">{{podcast.desc}}</a>{{podcast.text}}<a href="{{podcast.authorUrl}}" target="_blank">{{podcast.author}}</a></p>-->
-                                    <!--</div>-->
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="col-sm-4">
-                            <div class="  panel panel-default">
-                                <div class="panel-heading"><h4>Other Stuff&nbsp;<span class="badge">{{links.length}}</span>&nbsp;<small><a href="/api/links" target="_blank">api</a></small></h4></div>
-                                <div class="panel-body">
-                                    <!--<div ng-repeat="link in links">-->
+        <!--Page 4-->
+        <section class="page4" ng-controller="linksController">
+            <div class="container page_container">
+                <h1>Check out some of these links...</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h4>Some Podcasts I Listen To&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4></div>
+                            <div class="panel-body">
+                                <!--<div ng-repeat="podcast in podcasts">-->
+                                <p class="ng-binding">
+                                    <a href="http://dotnetrocks.com/" target="_blank" class="ng-binding">.NET Rocks!</a>
+                                </p>
+                                <p class="ng-binding">
+                                    <a href="https://itunes.apple.com/us/podcast/id393751871" target="_blank" class="ng-binding">Yet Another Podcast</a> by <a href="https://jesseliberty.com/" target="_blank" class="ng-binding">Jesse Liberty</a>
+                                </p>
+                                <p class="ng-binding">
+                                    <a href="http://blog.stackoverflow.com/category/podcasts/" target="_blank" class="ng-binding">StackExchange Podcast</a>
+                                </p>
+                                <p class="ng-binding">
+                                    <a href="http://herdingcode.com/" target="_blank" class="ng-binding">Herding Code Podcast</a>
+                                </p>
 
-
-                                    <p class="ng-binding"><a href="http://9to5mac.com/" target="_blank" class="ng-binding">9to5Mac</a> Apple Intelligence<a href="" target="_blank" class="ng-binding"></a></p>
-
-                                    <p class="ng-binding"><a href="http://blog.stackexchange.com/" target="_blank" class="ng-binding">StackExchange Blog</a><a href="" target="_blank" class="ng-binding"></a></p>
-
-                                    <p class="ng-binding"><a href="https://github.com/pdsullivan" target="_blank" class="ng-binding">My Github Account</a> (Not much on there at the moment)<a href="" target="_blank" class="ng-binding"></a></p>
-
-
-                                    <!--<p><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></p>-->
-                                    <!--</div>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="  panel panel-default">
-                                <div class="panel-heading"><h4>Dev Resources&nbsp;<span class="badge">{{devLinks.length}}</span>&nbsp;<small><a href="/api/devLinks" target="_blank">api</a></small></h4></div>
-                                <div class="panel-body">
-                                    <!--<div ng-repeat="devLink in devLinks">-->
-
-                                    <p class="ng-binding"><a href="http://webdevchecklist.com/" target="_blank" class="ng-binding">Web Development Checklist</a><a href="" target="_blank" class="ng-binding"></a></p>
-                                    <p class="ng-binding"><a href="http://sidewaffle.com/" target="_blank" class="ng-binding">SideWaffle</a><a href="" target="_blank" class="ng-binding"></a></p>
-
-                                    <!--<p><a href="{{devLink.url}}" target="_blank">{{devLink.desc}}</a>{{devLink.text}}<a href="{{devLink.authorUrl}}" target="_blank">{{devLink.author}}</a></p>-->
-                                    <!--</div>-->
-                                </div>
+                                <!--<p><a href="{{link.url}}" target="_blank">{{podcast.desc}}</a>{{podcast.text}}<a href="{{podcast.authorUrl}}" target="_blank">{{podcast.author}}</a></p>-->
+                                <!--</div>-->
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-sm-4">
+                        <div class="  panel panel-default">
+                            <div class="panel-heading"><h4>Other Stuff&nbsp;<span class="badge">{{links.length}}</span>&nbsp;<small><a href="/api/links" target="_blank">api</a></small></h4></div>
+                            <div class="panel-body">
+                                <!--<div ng-repeat="link in links">-->
+
+
+                                <p class="ng-binding"><a href="http://9to5mac.com/" target="_blank" class="ng-binding">9to5Mac</a> Apple Intelligence<a href="" target="_blank" class="ng-binding"></a></p>
+
+                                <p class="ng-binding"><a href="http://blog.stackexchange.com/" target="_blank" class="ng-binding">StackExchange Blog</a><a href="" target="_blank" class="ng-binding"></a></p>
+
+                                <p class="ng-binding"><a href="https://github.com/pdsullivan" target="_blank" class="ng-binding">My Github Account</a> (Not much on there at the moment)<a href="" target="_blank" class="ng-binding"></a></p>
+
+
+                                <!--<p><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></p>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="  panel panel-default">
+                            <div class="panel-heading"><h4>Dev Resources&nbsp;<span class="badge">{{devLinks.length}}</span>&nbsp;<small><a href="/api/devLinks" target="_blank">api</a></small></h4></div>
+                            <div class="panel-body">
+                                <!--<div ng-repeat="devLink in devLinks">-->
+
+                                <p class="ng-binding"><a href="http://webdevchecklist.com/" target="_blank" class="ng-binding">Web Development Checklist</a><a href="" target="_blank" class="ng-binding"></a></p>
+                                <p class="ng-binding"><a href="http://sidewaffle.com/" target="_blank" class="ng-binding">SideWaffle</a><a href="" target="_blank" class="ng-binding"></a></p>
+
+                                <!--<p><a href="{{devLink.url}}" target="_blank">{{devLink.desc}}</a>{{devLink.text}}<a href="{{devLink.authorUrl}}" target="_blank">{{devLink.author}}</a></p>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+
     </div>
+
 
     <!-- Resume Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

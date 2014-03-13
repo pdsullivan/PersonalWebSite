@@ -11,6 +11,7 @@ $(function () {
                 
             $('#homeNavListItem').removeClass('active');
             $('#aboutNavListItem').removeClass('active');
+            $('#workNavListItem').removeClass('active');
             $('#linksNavListItem').removeClass('active');
 
             switch(index)
@@ -22,6 +23,9 @@ $(function () {
                     $('#aboutNavListItem').addClass('active');
                     break;
                 case 3:
+                    $('#workNavListItem').addClass('active');
+                    break;
+                case 4:
                     $('#linksNavListItem').addClass('active');
                     break;
             }
@@ -52,9 +56,13 @@ $(function () {
         $('#aboutNavListItem').addClass('active');
         $(".main").moveTo(2);
     });
+    $("#workNavItem").click(function () {
+        $('#workNavListItem').addClass('active');
+        $(".main").moveTo(3);
+    });
     $("#linksNavItem").click(function () {
         $('#linksNavListItem').addClass('active');
-        $(".main").moveTo(3);
+        $(".main").moveTo(4);
     });
     $("#brandNavButton").click(function () {
         $(".main").moveTo(1);
