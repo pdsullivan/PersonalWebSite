@@ -16,10 +16,26 @@
 min-height: 675px;
 
 }
+
+.onepage-wrapper .work-section {
+    /*min-height: 800px;*/
+}
 .main section.page1 {
     background-color: #7a8288;
     background-color: white;
 }
 .modal-body {
     max-height: 1000px;
+}
+
+.work-thumbnail {
+    /*min-height: 270px;*/
+}
+
+.remove_button_css { 
+  outline: none;
+  padding: 5px; 
+  border: 0px; 
+  box-sizing: none; 
+  background-color: transparent; 
 }

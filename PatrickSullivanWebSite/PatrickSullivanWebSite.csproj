@@ -93,7 +93,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.custom.css" />
-    <Content Include="Content\images\bham.jpg" />
+    <Content Include="Content\images\GitHub.png" />
+    <Content Include="Content\images\GitHubSmall.png" />
+    <Content Include="Content\images\LinkedIn.png" />
+    <Content Include="Content\images\LinkedInSmall.png" />
+    <Content Include="Content\images\Resume.png" />
+    <Content Include="Content\images\ResumeSmall.png" />
+    <Content Include="Content\images\Stack.png" />
+    <Content Include="Content\images\StackSmall.png" />
     <Content Include="Content\site.css" />
     <Content Include="default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
