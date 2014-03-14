@@ -41,16 +41,24 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li id="homeNavListItem" class="active">
-                                <a id="homeNavItem" href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+                                <a id="homeNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Home">
+                                    <span class="glyphicon glyphicon-home"></span>
+                                </a>
                             </li>
                             <li id="aboutNavListItem">
-                                <a id="aboutNavItem" href="#"><span class="glyphicon glyphicon-user"></span> About</a>
+                                <a id="aboutNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="About Me">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </a>
                             </li>
                             <li id="workNavListItem">
-                                <a id="workNavItem" href="#"><span class="glyphicon glyphicon-briefcase"></span> Work</a>
+                                <a id="workNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="What I Do">
+                                    <span class="glyphicon glyphicon-briefcase"></span>
+                                </a>
                             </li>
                             <li id="linksNavListItem">
-                                <a id="linksNavItem" href="#"><span class="glyphicon glyphicon-send"></span> Other Stuff</a>
+                                <a id="linksNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Some Links">
+                                    <span class="glyphicon glyphicon-send"></span>
+                                </a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav">
@@ -65,7 +73,7 @@
 
 
         <!--Page 1-->
-        <section class="page1" style="background-color: #ffffff; ">
+        <section class="page1">
             <div class="row container page_container ">
 
                 <div class="jumbotron">
@@ -101,9 +109,6 @@
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
                         <button class="btn btn-default" data-toggle="modal" data-target="#myModal">View Resume</button>
-                        <!--<a class="btn btn-link" href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a>
-                        <a class="btn btn-link" href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn Page</a>
-                        <a class="btn btn-link" href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOverflow Account</a>-->
                     </div>
                 </div>
             </div>
@@ -117,46 +122,38 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="thumbnail work-thumbnail">
-                            <img class="hidden-xs" src="Content/images/GitHub.png" />
-                            <img class="visible-xs" src="Content/images/GitHubSmall.png" />
+                            <a href="https://github.com/pdsullivan" target="_blank">
+                                <img class="hidden-xs" src="Content/images/Git.png" />
+                                <img class="visible-xs" src="Content/images/GitMed.png" />
+                            </a>
                             <div class="caption">
                                 <p class="lead">
                                     <a href="https://github.com/pdsullivan" target="_blank">My GitGub</a>
                                 </p>
-                                <p class="text-muted">At the moment you can find this website there.</p>
+                                <p class="text-muted">This website is on there.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="thumbnail work-thumbnail">
-                            <img class="hidden-xs" src="Content/images/LinkedIn.png" />
-                            <img class="visible-xs" src="Content/images/LinkedInSmall.png" />
+                            <a href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">
+                                <img class="hidden-xs" src="Content/images/LinkedIn.png" />
+                                <img class="visible-xs" src="Content/images/LinkedInMed.png" />
+                            </a>
                             <div class="caption">
                                 <p class="lead">
                                     <a href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn</a>
                                 </p>
-                                <p class="text-muted">Here you can see my LinkedIn profile, connect with me.</p>
+                                <p class="text-muted">Connect with me!</p>
                             </div>
                         </div>
                     </div>
-                    <!--<div class="col-sm-4">
-                        <div class="thumbnail work-thumbnail">
-                            <img class="hidden-xs" src="Content/images/Resume.png" />
-                            <img class="visible-xs" src="Content/images/ResumeSmall.png" />
-                            <div class="caption">
-                                <p class="lead">
-                                    <button class="remove_button_css btn btn-link " data-toggle="modal" data-target="#myModal">
-                                        View Resume
-                                    </button>
-                                </p>
-                                <p>Take a look at my resume if you would like.</p>
-                            </div>
-                        </div>
-                    </div>-->
                     <div class="col-sm-4">
                         <div class="thumbnail work-thumbnail">
-                            <img class="hidden-xs" src="Content/images/Stack.png" />
-                            <img class="visible-xs" src="Content/images/StackSmall.png" />
+                            <a href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">
+                                <img class="hidden-xs" src="Content/images/Stack.png" />
+                                <img class="visible-xs" src="Content/images/StackMed.png" />
+                            </a>
                             <div class="caption">
                                 <p class="lead">
                                     <a href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOverflow</a>

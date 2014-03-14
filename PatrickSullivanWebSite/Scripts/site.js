@@ -2,7 +2,7 @@
 $(function () {
 
     var smallSize = 650;
-
+    $("[data-toggle='tooltip']").tooltip();//initializing tooltip stuff
     ShowHideBasedOnSize();
 
     $(".main").onepage_scroll({
