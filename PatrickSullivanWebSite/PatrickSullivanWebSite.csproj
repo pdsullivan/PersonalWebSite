@@ -105,8 +105,14 @@
     <Content Include="Content\images\Stack.png" />
     <Content Include="Content\images\StackMed.png" />
     <Content Include="Content\images\StackSmall.png" />
+    <Content Include="Content\error.css" />
     <Content Include="Content\site.css" />
     <Content Include="default.html" />
+    <Content Include="ErrorPages\401ErrorPage.html" />
+    <Content Include="ErrorPages\403ErrorPage.html" />
+    <Content Include="ErrorPages\500ErrorPage.html" />
+    <Content Include="ErrorPages\404ErrorPage.html" />
+    <Content Include="ErrorPages\ErrorPage.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />

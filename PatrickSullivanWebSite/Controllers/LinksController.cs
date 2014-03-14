@@ -16,7 +16,6 @@ namespace PatrickSullivanWebSite.Controllers
             db = (from x in Global.SiteDB.Links
                   where x.Type == "link"
                   select x).ToList();
-
             return Ok(db);
         }
 
