@@ -28,29 +28,29 @@ namespace PatrickSullivanWebSite.AppStart
             );
 
 
-            var errconfig = (CustomErrorsSection)ConfigurationManager.GetSection("system.web/customErrors");
+            //var errconfig = (CustomErrorsSection)ConfigurationManager.GetSection("system.web/customErrors");
 
-            IncludeErrorDetailPolicy errorDetailPolicy;
+            //IncludeErrorDetailPolicy errorDetailPolicy;
 
-            switch (errconfig.Mode)
-            {
-                case CustomErrorsMode.RemoteOnly:
-                    errorDetailPolicy
-                        = IncludeErrorDetailPolicy.LocalOnly;
-                    break;
-                case CustomErrorsMode.On:
-                    errorDetailPolicy
-                        = IncludeErrorDetailPolicy.Never;
-                    break;
-                case CustomErrorsMode.Off:
-                    errorDetailPolicy
-                        = IncludeErrorDetailPolicy.Always;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            //switch (errconfig.Mode)
+            //{
+            //    case CustomErrorsMode.RemoteOnly:
+            //        errorDetailPolicy
+            //            = IncludeErrorDetailPolicy.LocalOnly;
+            //        break;
+            //    case CustomErrorsMode.On:
+            //        errorDetailPolicy
+            //            = IncludeErrorDetailPolicy.Never;
+            //        break;
+            //    case CustomErrorsMode.Off:
+            //        errorDetailPolicy
+            //            = IncludeErrorDetailPolicy.Always;
+            //        break;
+            //    default:
+            //        throw new ArgumentOutOfRangeException();
+            //}
 
-            GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = errorDetailPolicy;
+            //GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = errorDetailPolicy;
 
         }
     }

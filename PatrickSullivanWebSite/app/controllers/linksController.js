@@ -4,7 +4,7 @@
 
 
         var onError = function () {
-            alert("error!!");
+            //alert("error!!");
         };
 
         var onLinks = function (response) {
