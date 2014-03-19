@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\contactController.js" />
     <Content Include="app\controllers\linksController.js" />
     <Content Include="app\services\linksService.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -99,6 +100,8 @@
     <Content Include="Content\images\LinkedIn.png" />
     <Content Include="Content\images\LinkedInMed.png" />
     <Content Include="Content\images\LinkedInSmall.png" />
+    <Content Include="Content\images\me.jpg" />
+    <Content Include="Content\images\MeSmall.jpg" />
     <Content Include="Content\images\Resume.png" />
     <Content Include="Content\images\ResumeMed.png" />
     <Content Include="Content\images\ResumeSmall.png" />
@@ -138,12 +141,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStart\WebApiConfig.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DevLinksController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

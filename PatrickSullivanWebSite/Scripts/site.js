@@ -47,7 +47,6 @@ $(function () {
         ShowHideBasedOnSize();
     });
 
-
     $("#homeNavItem").click(function () {
         $('#homeNavListItem').addClass('active');
         $('.main').moveTo(1);
@@ -73,10 +72,12 @@ $(function () {
         var width = $(window).width();
         if (width < smallSize) {
             $('#pdfRenderer').hide();
+            $('#toggleNavButton').hide();
             $('#mobilePDFMessage').show();
         }
         else {
             $('#pdfRenderer').show();
+            //$('#toggleNavButton').show();
             $('#mobilePDFMessage').hide();
         }
     };

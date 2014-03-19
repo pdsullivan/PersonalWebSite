@@ -14,10 +14,12 @@ namespace PatrickSullivanWebSite
     public class SiteDB 
     {
         public BiggyList<Link> Links;
-        
+        public BiggyList<ContactInfo> ContactInfos;
         public SiteDB()
         {
+
             Links = new BiggyList<Link>(dbPath: HttpRuntime.AppDomainAppPath);
+            ContactInfos = new BiggyList<ContactInfo>(dbPath: HttpRuntime.AppDomainAppPath);
 
             #region adding links
 

@@ -35,3 +35,11 @@ min-height: 675px;
 /*.page-header {
     border-bottom: 1px solid #666666;
 }*/
+.circular {
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(/Content/images/MeSmall.jpg) no-repeat;
+	}

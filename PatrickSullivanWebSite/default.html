@@ -1,15 +1,13 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="app">
 <head>
     <title>Patrick Sullivan | Do or do not. There is no try. </title>
     <meta name="google-site-verification" content="gPY0FAc-sLZ6gfzxtoBIcHjI2GhDgOZcVy7LXglE33w" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link href="Content/onepage-scroll.css" rel="stylesheet" />
     <link href="Content/bootstrap.custom.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
     <script>
-
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
@@ -19,18 +17,15 @@
 
         ga('create', 'UA-47824136-1', 'pdsullivan.com');
         ga('send', 'pageview');
-
     </script>
 </head>
-
 <body ng-cloak>
-
     <div id="navbarContainer" class="container row">
         <div class="  ">
             <nav class=" navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <button type="button" id="toggleNavButton" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -61,25 +56,20 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav">
-                        </ul>
+                        <ul class="nav navbar-nav"></ul>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
-
     <div class="main">
-
-
         <!--Page 1-->
         <section class="page1">
             <div class="row container page_container ">
-
                 <div class="jumbotron">
                     <div class="page-header">
 
-                        <h1 class="text-right">Patrick Sullivan</h1>
+                        <h1 class="text-right"><span class="circular"></span>Patrick Sullivan</h1>
                         <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-primary">Software Engineer</strong></h3>
                     </div>
                     <small class="">
@@ -88,13 +78,11 @@
                 </div>
             </div>
         </section>
-
         <!--Page 2-->
         <section class="page2">
             <div class="container page_container">
                 <div class="row">
                     <div class="col-xs-2">
-
                     </div>
                     <div class="col-xs-10 ">
                         <h1 class="text-primary">Hello,</h1>
@@ -109,13 +97,13 @@
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
                         <button class="btn btn-default" data-toggle="modal" data-target="#myModal">View Resume</button>
+                        <button class="btn btn-default" data-toggle="modal" data-target="#myContactModal">Contact Me</button>
                     </div>
                 </div>
             </div>
         </section>
-
         <!--Page 3-->
-        <section class="page3 work-section" >
+        <section class="page3 work-section">
             <div class="container page_container">
                 <h1 class="page-header">What I Do</h1>
                 <div class="divider"></div>
@@ -123,8 +111,8 @@
                     <div class="col-sm-4">
                         <div class="thumbnail work-thumbnail">
                             <a href="https://github.com/pdsullivan" target="_blank">
-                                <img class="hidden-xs" src="Content/images/Git.png" />
-                                <img class="visible-xs" src="Content/images/GitMed.png" />
+                                <img class="hidden-xs" src="Content/images/Git.png" alt="GitHub" />
+                                <img class="visible-xs" src="Content/images/GitMed.png" alt="GitHub" />
                             </a>
                             <div class="caption">
                                 <p class="lead">
@@ -137,8 +125,8 @@
                     <div class="col-sm-4">
                         <div class="thumbnail work-thumbnail">
                             <a href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">
-                                <img class="hidden-xs" src="Content/images/LinkedIn.png" />
-                                <img class="visible-xs" src="Content/images/LinkedInMed.png" />
+                                <img class="hidden-xs" src="Content/images/LinkedIn.png" alt="LinkedIn" />
+                                <img class="visible-xs" src="Content/images/LinkedInMed.png" alt="LinkedIn" />
                             </a>
                             <div class="caption">
                                 <p class="lead">
@@ -151,8 +139,8 @@
                     <div class="col-sm-4">
                         <div class="thumbnail work-thumbnail">
                             <a href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">
-                                <img class="hidden-xs" src="Content/images/Stack.png" />
-                                <img class="visible-xs" src="Content/images/StackMed.png" />
+                                <img class="hidden-xs" src="Content/images/Stack.png" alt="StackOverflow" />
+                                <img class="visible-xs" src="Content/images/StackMed.png" alt="StackOverflow" />
                             </a>
                             <div class="caption">
                                 <p class="lead">
@@ -165,9 +153,9 @@
                 </div>
             </div>
         </section>
-
         <!--Page 4-->
-        <section class="page4" ng-controller="linksController">
+        <section class="page4" data-ng-controller="linksController">
+            <!---->
             <div class="container page_container">
                 <h1>Check out some of these links...</h1>
                 <div class="row">
@@ -188,27 +176,19 @@
                                 <p class="ng-binding">
                                     <a href="http://herdingcode.com/" target="_blank" class="ng-binding">Herding Code Podcast</a>
                                 </p>
-
                                 <!--<p><a href="{{link.url}}" target="_blank">{{podcast.desc}}</a>{{podcast.text}}<a href="{{podcast.authorUrl}}" target="_blank">{{podcast.author}}</a></p>-->
                                 <!--</div>-->
                             </div>
                         </div>
                     </div>
-
                     <div class="col-sm-4">
                         <div class="  panel panel-default">
                             <div class="panel-heading"><h4>Other Stuff&nbsp;<span class="badge">{{links.length}}</span>&nbsp;<small><a href="/api/links" target="_blank">api</a></small></h4></div>
                             <div class="panel-body">
                                 <!--<div ng-repeat="link in links">-->
-
-
                                 <p class="ng-binding"><a href="http://9to5mac.com/" target="_blank" class="ng-binding">9to5Mac</a> Apple Intelligence<a href="" target="_blank" class="ng-binding"></a></p>
-
                                 <p class="ng-binding"><a href="http://blog.stackexchange.com/" target="_blank" class="ng-binding">StackExchange Blog</a><a href="" target="_blank" class="ng-binding"></a></p>
-
                                 <p class="ng-binding"><a href="https://github.com/pdsullivan" target="_blank" class="ng-binding">My Github Account</a> (Not much on there at the moment)<a href="" target="_blank" class="ng-binding"></a></p>
-
-
                                 <!--<p><a href="{{link.url}}" target="_blank">{{link.desc}}</a>{{link.text}}<a href="{{link.authorUrl}}" target="_blank">{{link.author}}</a></p>-->
                                 <!--</div>-->
                             </div>
@@ -219,10 +199,8 @@
                             <div class="panel-heading"><h4>Dev Resources&nbsp;<span class="badge">{{devLinks.length}}</span>&nbsp;<small><a href="/api/devLinks" target="_blank">api</a></small></h4></div>
                             <div class="panel-body">
                                 <!--<div ng-repeat="devLink in devLinks">-->
-
                                 <p class="ng-binding"><a href="http://webdevchecklist.com/" target="_blank" class="ng-binding">Web Development Checklist</a><a href="" target="_blank" class="ng-binding"></a></p>
                                 <p class="ng-binding"><a href="http://sidewaffle.com/" target="_blank" class="ng-binding">SideWaffle</a><a href="" target="_blank" class="ng-binding"></a></p>
-
                                 <!--<p><a href="{{devLink.url}}" target="_blank">{{devLink.desc}}</a>{{devLink.text}}<a href="{{devLink.authorUrl}}" target="_blank">{{devLink.author}}</a></p>-->
                                 <!--</div>-->
                             </div>
@@ -231,11 +209,7 @@
                 </div>
             </div>
         </section>
-
-
     </div>
-
-
     <!-- Resume Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -245,7 +219,6 @@
                     <h4 class="modal-title" id="myModalLabel">Resume</h4>
                 </div>
                 <div class="modal-body">
-
                     <p><strong id="mobilePDFMessage">Looks like your using a mobile (smaller) browser. </strong>To see resume in full page <a class="btn btn-primary" href="http://www.pdsullivan.com/PatrickSullivan Resume.pdf" target="_blank">click here</a></p>
                     <div style="height: 50%;" id="pdfRenderer"></div>
                 </div>
@@ -255,9 +228,47 @@
             </div>
         </div>
     </div>
-
-
-
+    <!-- Contact Modal -->
+    <div data-ng-controller="contactController" class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- FORM -->
+                    <form ng-submit="processForm()">
+                        <!-- NAME -->
+                        <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }">
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Bruce Wayne" ng-model="formData.name">
+                            <span class="help-block" ng-show="errorName">{{ errorName }}</span>
+                        </div>
+                        <!-- EMAIL -->
+                        <div id="superhero-group" class="form-group" ng-class="{ 'has-error' : errorSuperhero }">
+                            <label>Email</label>
+                            <input type="text" name="email" class="form-control" placeholder="Caped Crusader" ng-model="formData.email">
+                            <span class="help-block" ng-show="errorSuperhero">{{ errorSuperhero }}</span>
+                        </div>
+                        <!-- MESSAGE -->
+                        <div id="superhero-group" class="form-group" ng-class="{ 'has-error' : errorSuperhero }">
+                            <label>Message</label>
+                            <input type="text" name="message" class="form-control" placeholder="Caped Crusader" ng-model="formData.message">
+                            <span class="help-block" ng-show="errorSuperhero">{{ errorSuperhero }}</span>
+                        </div>
+                        <!-- SUBMIT BUTTON -->
+                        <button type="submit" class="btn btn-success btn-lg btn-block">
+                            <span class="glyphicon glyphicon-flash"></span> Submit!
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="Scripts/jquery-2.1.0.min.js"></script>
     <script src="Scripts/jquery.onepage-scroll.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
@@ -266,6 +277,7 @@
     <script src="app/app.js"></script>
     <script src="app/controllers/linksController.js"></script>
     <script src="app/services/linksService.js"></script>
+    <script src="app/controllers/contactController.js"></script>
     <script src="Scripts/pdfobject.js"></script>
 </body>
 </html>
