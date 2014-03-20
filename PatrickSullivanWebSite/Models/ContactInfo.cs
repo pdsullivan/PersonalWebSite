@@ -11,9 +11,4 @@ namespace PatrickSullivanWebSite.Models
         public string Email { get; set; }
         public string Message { get; set; }
     }
-    
-    protected override string ToString()
-    {
-        return "ContactInfo: name = " + Name + " email = " + Email + " message = " + Message;
-    }
 }

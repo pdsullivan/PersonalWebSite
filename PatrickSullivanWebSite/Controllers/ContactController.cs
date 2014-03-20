@@ -27,10 +27,10 @@ namespace PatrickSullivanWebSite.Controllers
 
         // POST api/contact
         [HttpPost]
-        public void Post(ContactInfo value)
+        public ContactInfo Post(ContactInfo value)
         {
-            //Conts.Add(value);
-            Console.WriteLine(value);
+            Conts.Add(value);
+            return value;
         }
 
         // PUT api/contact/5

@@ -11,10 +11,10 @@
 
             $http.post('/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
             .success(function (data) {
-                alert('Thanks ' + $scope.formData.name);
+                //alert('Thanks ' + $scope.formData.name);
                 $scope.formData = {};
                 $('#contactForm').hide();
-                $('#contactFormSuccess').removeclass('hidden');
+                $('#contactFormSuccess').className = ' alert alert-warning alert-dismissable';
             })
             .error(function (data) { });
 
