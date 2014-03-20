@@ -29,7 +29,7 @@ namespace PatrickSullivanWebSite.Controllers
         [HttpPost]
         public void Post(ContactInfo value)
         {
-            Conts.Add(value);
+            //Conts.Add(value);
             Console.WriteLine(value);
         }
 

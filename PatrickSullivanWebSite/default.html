@@ -237,28 +237,33 @@
                     <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
                 </div>
                 <div class="modal-body">
+                    <div  id="contactFormSuccess" class="hidden alert alert-warning alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
                     <!-- FORM -->
-                    <form ng-submit="processForm()">
+                    <form id="contactForm" name="contactForm" ng-submit="processForm()" novalidate>
                         <!-- NAME -->
-                        <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }">
+                        <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }">
                             <label>Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Bruce Wayne" ng-model="formData.name">
-                            <span class="help-block" ng-show="errorName">{{ errorName }}</span>
+                            <input type="text" name="name" class="form-control" placeholder="Bruce Wayne" ng-model="formData.name" required>
+                            <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
                         </div>
                         <!-- EMAIL -->
-                        <div id="superhero-group" class="form-group" ng-class="{ 'has-error' : errorSuperhero }">
+                        <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control" placeholder="Caped Crusader" ng-model="formData.email">
-                            <span class="help-block" ng-show="errorSuperhero">{{ errorSuperhero }}</span>
+                            <input type="email" name="email" class="form-control" placeholder="Caped Crusader" ng-model="formData.email" required>
+                            <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
                         </div>
                         <!-- MESSAGE -->
-                        <div id="superhero-group" class="form-group" ng-class="{ 'has-error' : errorSuperhero }">
+                        <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
                             <label>Message</label>
-                            <input type="text" name="message" class="form-control" placeholder="Caped Crusader" ng-model="formData.message">
-                            <span class="help-block" ng-show="errorSuperhero">{{ errorSuperhero }}</span>
+                            <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="Caped Crusader" ng-model="formData.message" required></textarea>
+                            <p ng-show="contactForm.message.$error.minlength" class="help-block">Message is too short.</p>
+                            <p ng-show="contactForm.message.$error.maxlength" class="help-block">Message is too long.</p>
                         </div>
                         <!-- SUBMIT BUTTON -->
-                        <button type="submit" class="btn btn-success btn-lg btn-block">
+                        <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success btn-lg btn-block">
                             <span class="glyphicon glyphicon-flash"></span> Submit!
                         </button>
                     </form>
