@@ -152,6 +152,6 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Mac desktop service store files
+# JSON Data files used with Biggy
 .DS_Store
 *.json
