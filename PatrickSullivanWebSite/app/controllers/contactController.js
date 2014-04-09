@@ -11,12 +11,13 @@
 
             $http.post('/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
             .success(function (data) {
-                //alert('Thanks ' + $scope.formData.name);
                 $scope.formData = {};
-                $('#contactForm').hide();
-                $('#contactFormSuccess').className = ' alert alert-warning alert-dismissable';
+                $scope.contactForm.$setPristine();
+                $scope.formSuccess = true;
             })
-            .error(function (data) { });
+            .error(function (data){
+                $scope.formFail = true;
+            });
 
         };
 

@@ -13,6 +13,7 @@ $(function () {
             $('#aboutNavListItem').removeClass('active');
             $('#workNavListItem').removeClass('active');
             $('#linksNavListItem').removeClass('active');
+            $('#contactNavListItem').removeClass('active');
 
             switch(index)
             {
@@ -25,8 +26,11 @@ $(function () {
                 case 3:
                     $('#workNavListItem').addClass('active');
                     break;
-                case 4:
+                case 5:
                     $('#linksNavListItem').addClass('active');
+                    break;
+                case 4:
+                    $('#contactNavListItem').addClass('active');
                     break;
             }
         },
@@ -61,12 +65,20 @@ $(function () {
     });
     $("#linksNavItem").click(function () {
         $('#linksNavListItem').addClass('active');
+        $(".main").moveTo(5);
+    });
+    $("#contactNavItem").click(function () {
+        $('#contactNavListItem').addClass('active');
         $(".main").moveTo(4);
     });
     $("#brandNavButton").click(function () {
         $(".main").moveTo(1);
     });
 
+    $("#btnContactMe").click(function () {
+        $('#contactNavListItem').addClass('active');
+        $(".main").moveTo(4);
+    })
 
     function ShowHideBasedOnSize() {
         var width = $(window).width();

@@ -43,3 +43,7 @@ min-height: 675px;
 	-moz-border-radius: 150px;
 	background: url(/Content/images/MeSmall.jpg) no-repeat;
 	}
+
+/*.navbar-brand span.fa{
+    font-size: small;
+}*/

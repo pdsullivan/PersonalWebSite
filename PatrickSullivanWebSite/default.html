@@ -7,6 +7,7 @@
     <link href="Content/onepage-scroll.css" rel="stylesheet" />
     <link href="Content/bootstrap.custom.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -32,9 +33,14 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" id="brandNavButton" href="#">Patrick Sullivan</a>
+                        
+                        <!--<a href="http://www.twitter.com/patsully88" class="navbar-brand" target="_blank">
+                            <span class="fa fa-twitter"></span>
+                        </a>-->
+                        
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right" style="margin-right: auto;">
                             <li id="homeNavListItem" class="active">
                                 <a id="homeNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Home">
                                     <span class="glyphicon glyphicon-home"></span>
@@ -50,13 +56,18 @@
                                     <span class="glyphicon glyphicon-briefcase"></span>
                                 </a>
                             </li>
+                            <li id="contactNavListItem">
+                                <a id="contactNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Contact Me">
+                                    <span class="glyphicon glyphicon-phone-alt"></span>
+                                </a>
+                            </li>
                             <li id="linksNavListItem">
                                 <a id="linksNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Some Links">
                                     <span class="glyphicon glyphicon-send"></span>
                                 </a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav"></ul>
+
                     </div>
                 </div>
             </nav>
@@ -96,8 +107,8 @@
                         <p class="lead">
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
-                        <button class="btn btn-default" data-toggle="modal" data-target="#myModal">View Resume</button>
-                        <button class="btn btn-default" data-toggle="modal" data-target="#myContactModal">Contact Me</button>
+                        <!--<button class="btn btn-default" data-toggle="modal" data-target="#myModal">View Resume</button>-->
+                        <button id="btnContactMe" class="btn btn-default" data-toggle="modal">Contact Me</button>
                     </div>
                 </div>
             </div>
@@ -114,7 +125,7 @@
                                 <img class="hidden-xs" src="Content/images/Git.png" alt="GitHub" />
                                 <img class="visible-xs" src="Content/images/GitMed.png" alt="GitHub" />
                             </a>
-                            <div class="caption">
+                            <div class="caption text-center">
                                 <p class="lead">
                                     <a href="https://github.com/pdsullivan" target="_blank">My GitGub</a>
                                 </p>
@@ -128,7 +139,7 @@
                                 <img class="hidden-xs" src="Content/images/LinkedIn.png" alt="LinkedIn" />
                                 <img class="visible-xs" src="Content/images/LinkedInMed.png" alt="LinkedIn" />
                             </a>
-                            <div class="caption">
+                            <div class="caption text-center">
                                 <p class="lead">
                                     <a href="http://www.linkedin.com/pub/patrick-sullivan/23/111/539" target="_blank">LinkedIn</a>
                                 </p>
@@ -142,7 +153,7 @@
                                 <img class="hidden-xs" src="Content/images/Stack.png" alt="StackOverflow" />
                                 <img class="visible-xs" src="Content/images/StackMed.png" alt="StackOverflow" />
                             </a>
-                            <div class="caption">
+                            <div class="caption text-center">
                                 <p class="lead">
                                     <a href="http://stackoverflow.com/users/1483002/drop-table-users" target="_blank">StackOverflow</a>
                                 </p>
@@ -154,7 +165,55 @@
             </div>
         </section>
         <!--Page 4-->
-        <section class="page4" data-ng-controller="linksController">
+        <section class="page4" data-ng-controller="contactController">
+            <div class="container page_container">
+                <div class="row">
+
+                    <div class="col-xs-12 ">
+                        <h1 class="text-primary">Contact Me</h1>
+                        <div class="modal-body">
+                            <div ng-show="formSuccess" class="ng-hide alert alert-success alert-dismissable">
+                                <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+                                <strong>Thanks!</strong> Thank you so much for sending me a message. <span class="glyphicon glyphicon-thumbs-up"></span>
+                            </div>
+                            <div ng-show="formFail" class="ng-hide alert alert-danger">
+
+                                <strong>Ouch!</strong> Something went wrong sending your message, very sorry! <span class="glyphicon glyphicon-thumbs-down"></span>
+                            </div>
+                            <!-- FORM -->
+                            <form id="contactForm" ng-class="contactForm" name="contactForm" ng-submit="processForm()" novalidate>
+                                <!-- NAME -->
+                                <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }">
+                                    <label>Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Bruce Wayne" ng-model="formData.name" required>
+                                    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
+                                </div>
+                                <!-- EMAIL -->
+                                <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Caped@Crusader.com" ng-model="formData.email" required>
+                                    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                                </div>
+                                <!-- MESSAGE -->
+                                <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
+                                    <label>Message</label>
+                                    <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="Hi there!!" ng-model="formData.message" required></textarea>
+                                    <p ng-show="contactForm.message.$error.minlength" class="help-block">Message is too short.</p>
+                                    <p ng-show="contactForm.message.$error.maxlength" class="help-block">Message is too long.</p>
+                                </div>
+                                <!-- SUBMIT BUTTON -->
+                                <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success btn-lg btn-block">
+                                    Send Message!  <span class="glyphicon glyphicon-arrow-right"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Page 5-->
+        <section class="page5" data-ng-controller="linksController">
             <!---->
             <div class="container page_container">
                 <h1>Check out some of these links...</h1>
@@ -209,6 +268,7 @@
                 </div>
             </div>
         </section>
+
     </div>
     <!-- Resume Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -229,45 +289,14 @@
         </div>
     </div>
     <!-- Contact Modal -->
-    <div data-ng-controller="contactController" class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
                 </div>
-                <div class="modal-body">
-                    <div  id="contactFormSuccess" class="hidden alert alert-warning alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
-                    </div>
-                    <!-- FORM -->
-                    <form id="contactForm" name="contactForm" ng-submit="processForm()" novalidate>
-                        <!-- NAME -->
-                        <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }">
-                            <label>Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Bruce Wayne" ng-model="formData.name" required>
-                            <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
-                        </div>
-                        <!-- EMAIL -->
-                        <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
-                            <label>Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Caped Crusader" ng-model="formData.email" required>
-                            <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
-                        </div>
-                        <!-- MESSAGE -->
-                        <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
-                            <label>Message</label>
-                            <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="Caped Crusader" ng-model="formData.message" required></textarea>
-                            <p ng-show="contactForm.message.$error.minlength" class="help-block">Message is too short.</p>
-                            <p ng-show="contactForm.message.$error.maxlength" class="help-block">Message is too long.</p>
-                        </div>
-                        <!-- SUBMIT BUTTON -->
-                        <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success btn-lg btn-block">
-                            <span class="glyphicon glyphicon-flash"></span> Submit!
-                        </button>
-                    </form>
-                </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
