@@ -14,9 +14,10 @@ namespace PatrickSullivanWebSite.Controllers
         BiggyList<ContactInfo> Conts = Global.SiteDB.ContactInfos;
 
         // GET api/contact
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            //var contacts = Conts.ToList();
+            return Ok();
         }
 
         // GET api/contact/5
@@ -27,10 +28,10 @@ namespace PatrickSullivanWebSite.Controllers
 
         // POST api/contact
         [HttpPost]
-        public ContactInfo Post(ContactInfo value)
+        public IHttpActionResult Post(ContactInfo value)
         {
             Conts.Add(value);
-            return value;
+            return Ok();
         }
 
         // PUT api/contact/5
