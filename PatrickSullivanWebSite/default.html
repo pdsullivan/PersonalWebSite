@@ -34,36 +34,32 @@
                         </button>
                         <a class="navbar-brand" id="brandNavButton" href="#">Patrick Sullivan</a>
                         
-                        <!--<a href="http://www.twitter.com/patsully88" class="navbar-brand" target="_blank">
-                            <span class="fa fa-twitter"></span>
-                        </a>-->
-                        
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right" style="margin-right: auto;">
                             <li id="homeNavListItem" class="active">
-                                <a id="homeNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Home">
-                                    <span class="glyphicon glyphicon-home"></span>
+                                <a id="homeNavItem" href="#" data-target=".navbar-collapse" data-toggle="collapse" title="Home">
+                                    <!--<span class="glyphicon glyphicon-home"></span>--> Home
                                 </a>
                             </li>
                             <li id="aboutNavListItem">
-                                <a id="aboutNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="About Me">
-                                    <span class="glyphicon glyphicon-user"></span>
+                                <a id="aboutNavItem" href="#" data-target=".navbar-collapse" data-toggle="collapse" title="About Me">
+                                    <!--<span class="glyphicon glyphicon-user"></span>--> About
                                 </a>
                             </li>
                             <li id="workNavListItem">
-                                <a id="workNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="What I Do">
-                                    <span class="glyphicon glyphicon-briefcase"></span>
+                                <a id="workNavItem" href="#" data-target=".navbar-collapse" data-toggle="collapse" title="What I Do">
+                                    <!--<span class="glyphicon glyphicon-briefcase"></span>--> Work
                                 </a>
                             </li>
                             <li id="contactNavListItem">
-                                <a id="contactNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Contact Me">
-                                    <span class="glyphicon glyphicon-phone-alt"></span>
+                                <a id="contactNavItem" href="#" data-target=".navbar-collapse" data-toggle="collapse" title="Contact Me">
+                                    <!--<span class="glyphicon glyphicon-phone-alt"></span>--> Contact Me
                                 </a>
                             </li>
                             <li id="linksNavListItem">
-                                <a id="linksNavItem" href="#" data-toggle="tooltip" data-placement="bottom" title="Some Links">
-                                    <span class="glyphicon glyphicon-send"></span>
+                                <a id="linksNavItem" href="#" data-target=".navbar-collapse" data-toggle="collapse" title="Some Links">
+                                    <!--<span class="glyphicon glyphicon-send"></span>--> Links
                                 </a>
                             </li>
                         </ul>
@@ -73,9 +69,9 @@
             </nav>
         </div>
     </div>
-    <div class="main">
+    <div class="main" id="main">
         <!--Page 1-->
-        <section class="page1">
+        <section class="page1 ops-section" id="page1">
             <div class="row container page_container ">
                 <div class="jumbotron">
                     <div class="page-header">
@@ -84,13 +80,25 @@
                         <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-primary">Software Engineer</strong></h3>
                     </div>
                     <small class="">
-                        Site created by <a href="http://www.pdsullivan.com" target="_blank">Patrick Sullivan (me)</a>. Using <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" target="_blank">One Page Scroll</a> and <a href="http://getbootstrap.com/" target="_blank"> Bootstrap</a>.
+                        Site created by
+                        <a href="http://www.pdsullivan.com" target="_blank">
+                            Patrick Sullivan (me)
+                        </a>. Using
+                        <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" target="_blank">
+                            One Page Scroll
+                        </a>,
+                        <a href="http://getbootstrap.com/" target="_blank">
+                            Bootstrap
+                        </a>, and
+                        <a target="_blank" href="https://github.com/robconery/biggy">
+                            Biggy
+                        </a> on the backend.
                     </small>
                 </div>
             </div>
         </section>
         <!--Page 2-->
-        <section class="page2">
+        <section class="page2 ops-section" id="page2">
             <div class="container page_container">
                 <div class="row">
                     <div class="col-xs-2">
@@ -114,7 +122,7 @@
             </div>
         </section>
         <!--Page 3-->
-        <section class="page3 work-section">
+        <section class="page3 work-section ops-section" id="page3">
             <div class="container page_container">
                 <h1 class="page-header">What I Do</h1>
                 <div class="divider"></div>
@@ -165,7 +173,7 @@
             </div>
         </section>
         <!--Page 4-->
-        <section class="page4" data-ng-controller="contactController">
+        <section class="page4 ops-section" data-ng-controller="contactController" id="page4">
             <div class="container page_container">
                 <div class="row">
 
@@ -203,7 +211,7 @@
                                 </div>
                                 <!-- SUBMIT BUTTON -->
                                 <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success btn-lg btn-block">
-                                    Send Message!  <span class="glyphicon glyphicon-arrow-right"></span>
+                                    Send  <span class="glyphicon glyphicon-arrow-right"></span>
                                 </button>
                             </form>
                         </div>
@@ -213,14 +221,16 @@
         </section>
 
         <!--Page 5-->
-        <section class="page5" data-ng-controller="linksController">
+        <section class="page5 ops-section" data-ng-controller="linksController" id="page5">
             <!---->
             <div class="container page_container">
                 <h1>Check out some of these links...</h1>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Some Podcasts I Listen To&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4></div>
+                            <div class="panel-heading">
+                                <h4>Some Podcasts I Listen To&nbsp;<span class="badge">{{podcasts.length}}</span>&nbsp;<small><a href="/api/podcasts" target="_blank">api</a></small></h4>
+                            </div>
                             <div class="panel-body">
                                 <!--<div ng-repeat="podcast in podcasts">-->
                                 <p class="ng-binding">
@@ -270,24 +280,7 @@
         </section>
 
     </div>
-    <!-- Resume Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Resume</h4>
-                </div>
-                <div class="modal-body">
-                    <p><strong id="mobilePDFMessage">Looks like your using a mobile (smaller) browser. </strong>To see resume in full page <a class="btn btn-primary" href="http://www.pdsullivan.com/PatrickSullivan Resume.pdf" target="_blank">click here</a></p>
-                    <div style="height: 50%;" id="pdfRenderer"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Contact Modal -->
     <div class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -305,6 +298,7 @@
     </div>
     <script src="Scripts/jquery-2.1.0.min.js"></script>
     <script src="Scripts/jquery.onepage-scroll.min.js"></script>
+    <!--<script src="Scripts/v1.onepage-scroll.js"></script>-->
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/site.js"></script>
@@ -312,6 +306,5 @@
     <script src="app/controllers/linksController.js"></script>
     <script src="app/services/linksService.js"></script>
     <script src="app/controllers/contactController.js"></script>
-    <script src="Scripts/pdfobject.js"></script>
 </body>
 </html>

@@ -11,22 +11,22 @@
     max-width: 950px;
     z-index: 3;
 }
-.onepage-wrapper .section {
+/*.onepage-wrapper .section {
 
 min-height: 675px;
 
 }
 
 .onepage-wrapper .work-section {
-    /*min-height: 800px;*/
-}
+    min-height: 800px;
+}*/
 .main section.page1 {
     background-color: #7a8288;
     background-color: white;
 }
-.modal-body {
+/*.modal-body {
     max-height: 1000px;
-}
+}*/
 
 .work-thumbnail {
     max-height: 231px;
@@ -44,6 +44,19 @@ min-height: 675px;
 	background: url(/Content/images/MeSmall.jpg) no-repeat;
 	}
 
-/*.navbar-brand span.fa{
-    font-size: small;
-}*/
+.navbar-border-button{
+    font-size: 14px;
+    color: #fff !important;
+    background-color: transparent !important;
+    border-color: #fff !important;
+}
+
+.navbar-border-button:hover {
+    color: black !important;
+    background-color: white !important; 
+    border-color: #fff !important;
+}
+
+@media(max-width:1200px){
+    .onepage-wrapper .ops-section { height:auto !important;}
+}
