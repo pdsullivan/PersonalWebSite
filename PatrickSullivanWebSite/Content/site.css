@@ -58,5 +58,11 @@ min-height: 675px;
 }
 
 @media(max-width:1200px){
-    .onepage-wrapper .ops-section { height:auto !important;}
+    .onepage-wrapper .ops-section { 
+        height:auto !important;
+
+    }
+    body {
+        margin-top: 45px;
+    }
 }
