@@ -8,33 +8,16 @@
     position: relative;
     top: 20%;
     margin: 0 auto 0;
-    max-width: 950px;
+    max-width: 1000px;
     z-index: 3;
 }
-/*.onepage-wrapper .section {
-
-min-height: 675px;
-
-}
-
-.onepage-wrapper .work-section {
-    min-height: 800px;
-}*/
 .main section.page1 {
     background-color: #7a8288;
     background-color: white;
 }
-/*.modal-body {
-    max-height: 1000px;
-}*/
-
 .work-thumbnail {
     max-height: 231px;
 }
-
-/*.page-header {
-    border-bottom: 1px solid #666666;
-}*/
 .circular {
 	width: 150px;
 	height: 150px;
@@ -56,14 +39,18 @@ min-height: 675px;
     background-color: white !important; 
     border-color: #fff !important;
 }
-
+.twitter-follow-button {
+    width: 84px !important;
+}
+.twitter-timeline {
+    margin-top: 10px !important;
+}
 @media(max-width:650px){
     .onepage-wrapper .ops-section { 
         height:auto !important;
-
     }
     body {
         margin-top: 45px;
+        margin-bottom: 45px;
     }
-
 }
