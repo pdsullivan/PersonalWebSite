@@ -1,7 +1,7 @@
 ﻿
 $(function () {
 
-    var smallSize = 1200;
+    var smallSize = 650;
     $("[data-toggle='tooltip']").tooltip();//initializing tooltip stuff
 
     //one page scroll initialization

@@ -57,7 +57,7 @@ min-height: 675px;
     border-color: #fff !important;
 }
 
-@media(max-width:1200px){
+@media(max-width:650px){
     .onepage-wrapper .ops-section { 
         height:auto !important;
 
@@ -65,4 +65,5 @@ min-height: 675px;
     body {
         margin-top: 45px;
     }
+
 }
