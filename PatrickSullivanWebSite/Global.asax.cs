@@ -72,6 +72,16 @@ namespace PatrickSullivanWebSite
 
                 Links.Add(new Link()
                 {
+                    Url = "http://hanselminutes.com/",
+                    Desc = "Hanselminutes",
+                    Type = "podcast",
+                    Text = " by ",
+                    Author = "Scott Hanselman",
+                    AuthorUrl = "http://www.hanselman.com/"
+                });
+
+                Links.Add(new Link()
+                {
                     Url = "https://itunes.apple.com/us/podcast/id393751871",
                     Desc = "Yet Another Podcast",
                     Text = " by ",

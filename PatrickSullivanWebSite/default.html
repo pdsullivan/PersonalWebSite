@@ -109,7 +109,7 @@
             <div class="container page_container">
                 <div class="row">
 
-                    <div class="col-sm-8 ">
+                    <div class="col-sm-10 ">
                         <h1 class="text-primary">Hello,</h1>
                         <p class="lead ">
                             I am Patrick Sullivan and I live in Birmingham, Alabama.  Currently I work at
@@ -122,11 +122,9 @@
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
                         <button id="btnContactMe" class="btn btn-default" data-toggle="modal">Contact Me</button>
+                        <button id="btnContactMe" class="btn btn-default" data-target="#myContactModal" data-toggle="modal">Contact Me</button>
                     </div>
-                    <div class="col-sm-4">
-                        <!--<a class="twitter-timeline" href="https://twitter.com/PatSully88" data-widget-id="462595082286166016">Tweets by @PatSully88</a>
-                        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>-->
-
+                    <div class="col-sm-2">
                     </div>
                 </div>
             </div>
@@ -247,6 +245,9 @@
                                     <a href="http://dotnetrocks.com/" target="_blank" class="ng-binding">.NET Rocks!</a>
                                 </p>
                                 <p class="ng-binding">
+                                    <a href="http://hanselminutes.com/" target="_blank" class="ng-binding">Hanselminutes</a> by <a href="http://www.hanselman.com/" target="_blank" class="ng-binding">Scott Hanselman</a>
+                                </p>
+                                <p class="ng-binding">
                                     <a href="https://itunes.apple.com/us/podcast/id393751871" target="_blank" class="ng-binding">Yet Another Podcast</a> by <a href="https://jesseliberty.com/" target="_blank" class="ng-binding">Jesse Liberty</a>
                                 </p>
                                 <p class="ng-binding">
@@ -293,13 +294,16 @@
 
     <!-- Contact Modal -->
     <div class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
                 </div>
-
+                <div class="modal-body">
+                    <a class="twitter-timeline" href="https://twitter.com/PatSully88" data-widget-id="462595082286166016">Tweets by @PatSully88</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>

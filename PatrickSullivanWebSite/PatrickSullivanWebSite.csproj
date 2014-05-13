@@ -77,6 +77,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\contactinfos.json" />
+    <Content Include="Data\links.json" />
     <None Include="Properties\PublishProfiles\azure.pubxml" />
     <None Include="Properties\PublishProfiles\patricksullivan - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\patricksullivan - Web Deploy.pubxml" />
