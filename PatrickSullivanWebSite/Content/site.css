@@ -12,8 +12,8 @@
     z-index: 3;
 }
 .main section.page1 {
-    background-color: #7a8288;
-    background-color: white;
+    /*background-color: #7a8288;
+    background-color: white;*/
 }
 .work-thumbnail {
     max-height: 231px;

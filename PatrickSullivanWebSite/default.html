@@ -7,7 +7,8 @@
     <link href="Content/onepage-scroll.css" rel="stylesheet" />
     <link href="Content/bootstrap.custom.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/colors.css" rel="stylesheet" />
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -74,7 +75,7 @@
         <!--Page 1-->
         <section class="page1 ops-section" id="page1">
             <div class="row container page_container ">
-                <div class="jumbotron">
+                <div class="jumbotron bg-transparent">
                     <div class="page-header">
 
                         <h1 class="text-right"><span class="circular"></span>Patrick Sullivan</h1>
@@ -83,24 +84,26 @@
                                 <a href="http://twitter.com/patsully88" target="_blank">@patsully88</a>
                             </small>
                         </h3>
-                        
+
                         <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-primary">Software Engineer</strong></h3>
                     </div>
-                    <small class="">
-                        Site created by
-                        <a href="http://www.pdsullivan.com" target="_blank">
-                            Patrick Sullivan (me)
-                        </a>. Using
-                        <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" target="_blank">
-                            One Page Scroll
-                        </a>,
-                        <a href="http://getbootstrap.com/" target="_blank">
-                            Bootstrap
-                        </a>, and
-                        <a target="_blank" href="https://github.com/robconery/biggy">
-                            Biggy
-                        </a> on the backend.
-                    </small>
+                    <spann class="text-right">
+                        <small class="">
+                            Site created by
+                            <a href="http://www.pdsullivan.com" target="_blank">
+                                Patrick Sullivan (me)
+                            </a>. Using
+                            <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" target="_blank">
+                                One Page Scroll
+                            </a>,
+                            <a href="http://getbootstrap.com/" target="_blank">
+                                Bootstrap
+                            </a>, and
+                            <a target="_blank" href="https://github.com/robconery/biggy">
+                                Biggy
+                            </a> on the backend.
+                        </small>
+                    </spann>
                 </div>
             </div>
         </section>
@@ -121,8 +124,9 @@
                         <p class="lead">
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
-                        <button id="btnContactMe" class="btn btn-default" data-toggle="modal">Contact Me</button>
-                        <button id="btnContactMe" class="btn btn-default" data-target="#myContactModal" data-toggle="modal">Contact Me</button>
+                        <button id="btnContactMe" class="btn btn-primary" data-toggle="modal">Contact Me <i class="fa fa-envelope-o fa-lg"></i></button>
+                        <a id="btnTwitter" class="btn btn-default" href="https://www.twitter.com/patsully88" target="_blank"><i class="fa fa-twitter-square fa-lg"></i></a>
+                        <a id="btnTwitter" class="btn btn-default" href="http://instagram.com/patsully88" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
                     </div>
                     <div class="col-sm-2">
                     </div>
@@ -190,11 +194,11 @@
                         <div class="modal-body">
                             <div ng-show="formSuccess" class="ng-hide alert alert-success alert-dismissable">
                                 <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
-                                <strong>Thanks!</strong> Thank you so much for sending me a message. <span class="glyphicon glyphicon-thumbs-up"></span>
+                                <strong>Thanks!</strong> Thank you so much for sending me a message. <i class="fa fa-smile-o"></i>
                             </div>
                             <div ng-show="formFail" class="ng-hide alert alert-danger">
 
-                                <strong>Ouch!</strong> Something went wrong sending your message, very sorry! <span class="glyphicon glyphicon-thumbs-down"></span>
+                                <strong>Ouch!</strong> Something went wrong sending your message, very sorry! <i class="fa fa-frown-o"></i>
                             </div>
                             <!-- FORM -->
                             <form id="contactForm" ng-class="contactForm" name="contactForm" ng-submit="processForm()" novalidate>
@@ -213,13 +217,13 @@
                                 <!-- MESSAGE -->
                                 <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
                                     <label>Message</label>
-                                    <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="Hi there!!" ng-model="formData.message" required></textarea>
+                                    <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="Dang, that Patrick Sullivan guy is a looser!!" ng-model="formData.message" required></textarea>
                                     <p ng-show="contactForm.message.$error.minlength" class="help-block">Message is too short.</p>
                                     <p ng-show="contactForm.message.$error.maxlength" class="help-block">Message is too long.</p>
                                 </div>
                                 <!-- SUBMIT BUTTON -->
-                                <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success btn-lg btn-block">
-                                    Send  <span class="glyphicon glyphicon-arrow-right"></span>
+                                <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success">
+                                    Send  <i class="fa fa-send-o fa-lg"></i></span>
                                 </button>
                             </form>
                         </div>

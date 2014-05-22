@@ -77,8 +77,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\contactinfos.json" />
-    <Content Include="Data\links.json" />
+    <Content Include="Content\colors.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\azure.pubxml" />
     <None Include="Properties\PublishProfiles\patricksullivan - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\patricksullivan - Web Deploy.pubxml" />
