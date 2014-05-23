@@ -9,6 +9,7 @@
     <link href="Content/site.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/colors.css" rel="stylesheet" />
+    <link href="Content/bootstrap-outline-btn.css" rel="stylesheet" />
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -124,9 +125,14 @@
                         <p class="lead">
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
                         </p>
-                        <button id="btnContactMe" class="btn btn-primary" data-toggle="modal">Contact Me <i class="fa fa-envelope-o fa-lg"></i></button>
-                        <a id="btnTwitter" class="btn btn-default" href="https://www.twitter.com/patsully88" target="_blank"><i class="fa fa-twitter-square fa-lg"></i></a>
-                        <a id="btnTwitter" class="btn btn-default" href="http://instagram.com/patsully88" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                        <!--
+                        <button id="btnContactMe" class="btn btn-primary btn-outline" data-toggle="modal">Contact Me <i class="fa fa-envelope-o fa-lg"></i></button>
+                        <br />
+                        <br />
+                        -->
+                        <button id="btnContactMe" class="btn btn-primary btn-outline" data-toggle="modal"><i class="fa fa-envelope-o fa-lg"></i></button>
+                        <a id="btnTwitter" class="btn btn-success btn-outline" href="https://www.twitter.com/patsully88" target="_blank"><i class="fa fa-twitter-square fa-lg"></i></a>
+                        <a id="btnTwitter" class="btn btn-success btn-outline" href="http://instagram.com/patsully88" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
                     </div>
                     <div class="col-sm-2">
                     </div>
@@ -222,7 +228,7 @@
                                     <p ng-show="contactForm.message.$error.maxlength" class="help-block">Message is too long.</p>
                                 </div>
                                 <!-- SUBMIT BUTTON -->
-                                <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success">
+                                <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-success btn-outline btn-block">
                                     Send  <i class="fa fa-send-o fa-lg"></i></span>
                                 </button>
                             </form>
