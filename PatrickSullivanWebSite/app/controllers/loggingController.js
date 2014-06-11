@@ -24,9 +24,23 @@
         //alert('init logging controller');
 
         $scope.init = function () {
-            $scope.logData.message = "page loaded";
-            $scope.logData.details = window.location.href.toString();
+            var clientData = "{ ";
+            $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+                
+                var firsttime = true;
+                $.each(data, function (k, v) {
+                    if (!firsttime) {
+                        clientData += " , "
+                    }
+                    clientData += " \"" + k + "\" : \"" + v + "\"  ";
+                    firsttime = false;
+                });
+                clientData += " }";
+            alert(clientData);
+            $scope.logData.message = "PAGELOAD";
+            $scope.logData.details = clientData.toString();
             $scope.createLogEntry();
+            });
         };
 
         $scope.init();
