@@ -10,5 +10,8 @@ namespace PatrickSullivanWebSite.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
+        public string DateSubmited { get; set; }
+        public string Location { get; set; }
+        public string ExtraInfo { get; set; }
     }
 }

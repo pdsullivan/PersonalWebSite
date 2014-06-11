@@ -84,8 +84,8 @@
 
                         <h3 class="text-right lead"><small>Professional Pizza Taster</br>But in my spare time I'm a </small><strong class="text-primary">Software Engineer</strong></h3>
                     </div>
-                    <spann class="text-right">
-                        <small class="">
+                    <span class="text-right">
+                        <small class="text-right">
                             Site created by
                             <a href="http://www.pdsullivan.com" target="_blank">
                                 Patrick Sullivan (me)
@@ -100,7 +100,7 @@
                                 Biggy
                             </a> on the backend.
                         </small>
-                    </spann>
+                    </span>
                 </div>
             </div>
         </section>
@@ -120,6 +120,7 @@
                         </p>
                         <p class="lead">
                             I have a passion for learning about and working with new technologies, and that passion has led (in part) to this website.
+                            You can find my full background on my resume <a href="http://pdsullivan.com/PatrickSullivanResume05282014.pdf" target="_blank">here</a>.
                         </p>
                         <!--
                         <button id="btnContactMe" class="btn btn-primary btn-outline" data-toggle="modal">Contact Me <i class="fa fa-envelope-o fa-lg"></i></button>
@@ -219,7 +220,7 @@
                                 <!-- MESSAGE -->
                                 <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
                                     <label>Message</label>
-                                    <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="Dang, that Patrick Sullivan guy is a looser!!" ng-model="formData.message" required></textarea>
+                                    <textarea ng-minlength="3" ng-maxlength="300" a name="message" class="form-control" placeholder="That Patrick Sullivan guy is so cool." ng-model="formData.message" required></textarea>
                                     <p ng-show="contactForm.message.$error.minlength" class="help-block">Message is too short.</p>
                                     <p ng-show="contactForm.message.$error.maxlength" class="help-block">Message is too long.</p>
                                 </div>
@@ -294,28 +295,11 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
     </div>
 
-    <!-- Contact Modal -->
-    <div class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
-                </div>
-                <div class="modal-body">
-                    <a class="twitter-timeline" href="https://twitter.com/PatSully88" data-widget-id="462595082286166016">Tweets by @PatSully88</a>
-                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="Scripts/jquery-2.1.0.min.js"></script>
     <script src="Scripts/jquery.onepage-scroll.min.js"></script>
     <!--<script src="Scripts/v1.onepage-scroll.js"></script>-->
@@ -326,5 +310,9 @@
     <script src="app/controllers/linksController.js"></script>
     <script src="app/services/linksService.js"></script>
     <script src="app/controllers/contactController.js"></script>
+    <script src="app/controllers/loggingController.js"></script>
+    <div data-ng-controller="loggingController" >
+
+    </div>
 </body>
 </html>

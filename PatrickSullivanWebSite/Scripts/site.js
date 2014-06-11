@@ -47,14 +47,6 @@ $(function () {
 
             document.getElementById(page).scrollIntoView();
 
-            //attempt at offset not done yet
-            //Element.prototype.documentOffsetTop = function () {
-            //    return this.offsetTop + (this.offsetParent ? this.offsetParent.documentOffsetTop() : 0);
-            //};
-
-            //var top = document.getElementById(page).documentOffsetTop() - 45;
-            //console.log(top);
-            //window.scrollTo( 0, top );
         }
     };
 

@@ -1,4 +1,4 @@
-﻿ .topmessage {
+﻿.topmessage {
     position: absolute;
     margin-top:0;
     z-index: 1;
@@ -11,10 +11,7 @@
     max-width: 1000px;
     z-index: 3;
 }
-.main section.page1 {
-    /*background-color: #7a8288;
-    background-color: white;*/
-}
+
 .work-thumbnail {
     max-height: 231px;
 }
@@ -25,7 +22,7 @@
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 	background: url(/Content/images/MeSmall.jpg) no-repeat;
-	}
+}
 
 .navbar-border-button{
     font-size: 14px;

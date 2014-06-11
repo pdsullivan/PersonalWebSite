@@ -8,7 +8,10 @@
 
         // process the form
         $scope.processForm = function () {
-
+            var today = new Date();
+            $scope.formData.dateSubmited = today;
+            $scope.formData.Location = "";
+            $scope.formData.extraInfo = "";
             $http.post('/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
             .success(function (data) {
                 $scope.formData = {};

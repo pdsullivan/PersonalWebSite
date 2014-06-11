@@ -77,6 +77,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controllers\loggingController.js" />
     <Content Include="Content\bootstrap-outline-btn.css" />
     <Content Include="Content\colors.css" />
     <Content Include="Content\font-awesome.css" />
@@ -157,12 +158,14 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DevLinksController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
+    <Compile Include="Controllers\LoggingController.cs" />
     <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\LogEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
