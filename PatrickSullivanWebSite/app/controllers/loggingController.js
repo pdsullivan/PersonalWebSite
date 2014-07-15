@@ -36,7 +36,7 @@
                     firsttime = false;
                 });
                 clientData += " }";
-            alert(clientData);
+            //alert(clientData);
             $scope.logData.message = "PAGELOAD";
             $scope.logData.details = clientData.toString();
             $scope.createLogEntry();
