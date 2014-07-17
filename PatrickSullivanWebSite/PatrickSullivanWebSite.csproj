@@ -82,6 +82,7 @@
     <Content Include="Content\colors.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="default.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -124,7 +125,6 @@
     <Content Include="Content\images\StackSmall.png" />
     <Content Include="Content\error.css" />
     <Content Include="Content\site.css" />
-    <Content Include="default.html" />
     <Content Include="ErrorPages\401ErrorPage.html" />
     <Content Include="ErrorPages\403ErrorPage.html" />
     <Content Include="ErrorPages\500ErrorPage.html" />
