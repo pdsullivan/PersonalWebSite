@@ -21,5 +21,13 @@ namespace PatrickSullivanWebSite.Controllers
             Log.Add(value);
             return Ok();
         }
+
+        [Route("api/logging")]
+        [HttpGet]
+        public IHttpActionResult GetAll()
+        {
+            var logitems = Log.ToList();
+            return Ok(logitems);
+        }
     }
 }

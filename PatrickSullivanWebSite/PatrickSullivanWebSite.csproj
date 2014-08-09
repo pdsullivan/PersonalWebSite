@@ -78,6 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controllers\loggingController.js" />
+    <Content Include="blog\Content\nuget.png" />
+    <Content Include="blog\Content\storyboard.png" />
+    <Content Include="blog\Content\xamarinstudio.png" />
+    <Content Include="blog\favorite-xamarin-studio-features.html" />
     <Content Include="Content\bootstrap-outline-btn.css" />
     <Content Include="Content\colors.css" />
     <Content Include="Content\font-awesome.css" />

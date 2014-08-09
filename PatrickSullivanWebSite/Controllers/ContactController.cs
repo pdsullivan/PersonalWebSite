@@ -16,8 +16,8 @@ namespace PatrickSullivanWebSite.Controllers
         // GET api/contact
         public IHttpActionResult Get()
         {
-            //var contacts = Conts.ToList();
-            return Ok();
+            var contacts = ContactInfo.GetAllContactItems();
+            return Ok(contacts);
         }
 
         // GET api/contact/5
