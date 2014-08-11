@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controllers\loggingController.js" />
+    <Content Include="blog.html" />
     <Content Include="blog\Content\nuget.png" />
     <Content Include="blog\Content\storyboard.png" />
     <Content Include="blog\Content\xamarinstudio.png" />
