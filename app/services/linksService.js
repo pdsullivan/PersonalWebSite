@@ -1,5 +1,5 @@
 ﻿(function (app) {
-    var baseUrl = "/api";
+    var baseUrl = "http://pdsullivan.azurewebsites.net/api";
     var linksService = function ($http) {
         var linksFactory = {};
         linksFactory.getLinks = function () {
