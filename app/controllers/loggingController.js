@@ -11,7 +11,8 @@
             $scope.logData.date = today;
             //$scope.logData.message = "";
             //$scope.logData.details = "";
-            $http.post('http://pdsullivan.azurewebsites.net/api/logging', JSON.stringify($scope.logData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
+            //$http.post('http://pdsullivan.azurewebsites.net/api/logging', JSON.stringify($scope.logData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
+            $http.post('http://pdsullivan.azurewebsites.net/api/logging', JSON.stringify($scope.logData))
             .success(function (data) {
                 $scope.logData = {};
             })

@@ -12,7 +12,8 @@
             $scope.formData.dateSubmited = today;
             $scope.formData.Location = "";
             $scope.formData.extraInfo = "";
-            $http.post('http://pdsullivan.azurewebsites.net/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
+            //$http.post('http://pdsullivan.azurewebsites.net/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
+            $http.post('http://pdsullivan.azurewebsites.net/api/contact', JSON.stringify($scope.formData))
             .success(function (data) {
                 $scope.formData = {};
                 $scope.contactForm.$setPristine();
