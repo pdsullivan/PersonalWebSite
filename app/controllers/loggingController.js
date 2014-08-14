@@ -11,7 +11,7 @@
             $scope.logData.date = today;
             //$scope.logData.message = "";
             //$scope.logData.details = "";
-            $http.post('/api/logging', JSON.stringify($scope.logData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
+            $http.post('http://pdsullivan.com/api/logging', JSON.stringify($scope.logData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
             .success(function (data) {
                 $scope.logData = {};
             })

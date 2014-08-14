@@ -12,7 +12,7 @@
             $scope.formData.dateSubmited = today;
             $scope.formData.Location = "";
             $scope.formData.extraInfo = "";
-            $http.post('/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
+            $http.post('http://pdsullivan.com/api/contact', JSON.stringify($scope.formData), { headers: { 'Content-Type': 'application/json; charset=utf-8' } })
             .success(function (data) {
                 $scope.formData = {};
                 $scope.contactForm.$setPristine();
