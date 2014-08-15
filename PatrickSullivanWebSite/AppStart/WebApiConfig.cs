@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PatrickSullivanWebSite.AppStart
 {
@@ -14,11 +15,13 @@ namespace PatrickSullivanWebSite.AppStart
     {
         public static void Register(HttpConfiguration config)
         {
-            config.MapHttpAttributeRoutes();
+            config.EnableCors();
 
+            config.MapHttpAttributeRoutes();
+            
             var formatters = GlobalConfiguration.Configuration.Formatters;
             var jsonFormatter = formatters.JsonFormatter;
-            jsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
+            //jsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
             var settings = jsonFormatter.SerializerSettings;
             settings.Formatting = Formatting.Indented;
             settings.ContractResolver = new CamelCasePropertyNamesContractResolver();

@@ -4,12 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Biggy;
 using Biggy.JSON;
 using PatrickSullivanWebSite.Models;
 
 namespace PatrickSullivanWebSite.Controllers
 {
+    [EnableCors(origins: "http://www.pdsullivan.com", headers: "*", methods: "*")]
     public class LoggingController : ApiController
     {
         BiggyList<LogEntry> Log = Global.SiteDB.LogEntryList;
@@ -22,7 +24,7 @@ namespace PatrickSullivanWebSite.Controllers
             return Ok();
         }
 
-        [Route("api/logging")]
+        [Route("api/alllogging")]
         [HttpGet]
         public IHttpActionResult GetAll()
         {
