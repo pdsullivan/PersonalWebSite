@@ -38,7 +38,7 @@
                 //alert(clientData);
                 $scope.logData.message = "PAGELOAD";
                 $scope.logData.details = clientData.toString();
-                $scope.logData.source = document.url.toString();
+                $scope.logData.source = window.location.href.toString();
                 $scope.createLogEntry();
             });
         };
