@@ -1,6 +1,6 @@
 Personal Website
 ===============
-This is my personal website you can find it at www.pdsullivan.com. 
+This is my personal website you can find it at www.pdsullivan.com.  The front end pages are in the "gh-pages" branch.
 
 The front end of this site is hosted on github pages, and the api that the site calls to is an ASP.NET Web API running on azure the url to that is http://pdsullivan.azurewebsites.net
 
