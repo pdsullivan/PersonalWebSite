@@ -10,6 +10,7 @@ namespace PatrickSullivanWebSite.Models
         public string Message { get; set; }
         public string Details { get; set; }
         public string Date { get; set; }
+        public string Source { get; set; }
 
     }
 }
