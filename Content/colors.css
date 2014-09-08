@@ -125,15 +125,16 @@
 a {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out; }
-
-/*a:link {
-  color: #0074d9; }
+/*
+a:link {
+  color: #1BBC9B; }
 
 a:visited {
-  color: #b10dc9; }
+  color: #1BBC9B; }
 
 a:hover {
-  color: #7fdbff; }
+  color: #BDC3C7; }
 
 a:active {
-  color: #ff851b; }*/
+  color: #BDC3C7; }
+*/
