@@ -42,6 +42,9 @@
       <HintPath>references\Biggy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NewRelic.Api.Agent">
+      <HintPath>..\packages\NewRelic.Azure.WebSites.3.8.1.0\lib\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -101,6 +104,22 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="newrelic\extensions\CoreInstrumentation.xml" />
+    <Content Include="newrelic\extensions\Providers\TransactionContext\Asp\NewRelic.Agent.Extensions.dll" />
+    <Content Include="newrelic\extensions\Providers\TransactionContext\Asp\NewRelic.Providers.TransactionContext.Asp.Repacked.dll" />
+    <Content Include="newrelic\extensions\Providers\TransactionContext\Default\NewRelic.Agent.Extensions.dll" />
+    <Content Include="newrelic\extensions\Providers\TransactionContext\Default\NewRelic.Providers.TransactionContext.Default.Repacked.dll" />
+    <Content Include="newrelic\extensions\Providers\TransactionContext\Wcf3\NewRelic.Agent.Extensions.dll" />
+    <Content Include="newrelic\extensions\Providers\TransactionContext\Wcf3\NewRelic.Providers.TransactionContext.Wcf3.Repacked.dll" />
+    <Content Include="newrelic\NewRelic.Agent.Core.dll" />
+    <Content Include="newrelic\NewRelic.Agent.Extensions.dll" />
+    <Content Include="newrelic\newrelic.config" />
+    <Content Include="newrelic\extensions\extension.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="newrelic\newrelic.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\pdsullivan - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -143,6 +162,7 @@
     <Content Include="ErrorPages\ErrorPage.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="newrelic\NewRelic.Profiler.dll" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

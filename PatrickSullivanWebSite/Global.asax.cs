@@ -16,16 +16,21 @@ namespace PatrickSullivanWebSite
         public BiggyList<Link> Links;
         public BiggyList<ContactInfo> ContactInfos;
         public BiggyList<LogEntry> LogEntryList;
+        public BiggyList<LogEntry> BlogLogEntryList;
+        public BiggyList<LogEntry> ArchiveLogList;
         public SiteDB()
         {
 
             Links = new BiggyList<Link>(dbPath: HttpRuntime.AppDomainAppPath);
             ContactInfos = new BiggyList<ContactInfo>(dbPath: HttpRuntime.AppDomainAppPath);
             LogEntryList = new BiggyList<LogEntry>(dbPath: HttpRuntime.AppDomainAppPath);
+            BlogLogEntryList = new BiggyList<LogEntry>(dbPath: HttpRuntime.AppDomainAppPath, dbName: "blogLog");
+            ArchiveLogList = new BiggyList<LogEntry>(dbPath: HttpRuntime.AppDomainAppPath, dbName: "archiveLog");
+
             #region adding links
 
             //adding links test
-            if(Links.Count <  1)
+            if (Links.Count <  1)
             {
                Links.Add( new Link()
                {
