@@ -23,21 +23,11 @@
         //alert('init logging controller');
 
         $scope.init = function () {
-                var clientData = "{ ";
-                $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
-                    
-                    var firsttime = true;
-                    $.each(data, function (k, v) {
-                        if (!firsttime) {
-                            clientData += " , "
-                        }
-                        clientData += " \"" + k + "\" : \"" + v + "\"  ";
-                        firsttime = false;
-                    });
-                    clientData += " }";
-                //alert(clientData);
+
+            $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+
                 $scope.logData.message = "PAGELOAD";
-                $scope.logData.details = clientData.toString();
+                $scope.logData.details = data;
                 $scope.logData.source = window.location.href.toString();
                 $scope.createLogEntry();
             });
