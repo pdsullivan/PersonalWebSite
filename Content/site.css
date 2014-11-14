@@ -52,3 +52,53 @@
     }
 }
 
+body {
+
+           font-family: 'Roboto', sans-serif;
+           
+             background-color: #ffffff;
+
+             margin-top: 7%;
+        }
+      h1 {
+        letter-spacing: 1px;
+        word-spacing: 12px;
+
+      }
+      hr {
+        border-top: 1px solid #BDC3C7;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #mainDisplay {
+        background-color: #34495E;
+      }
+      .gallery{
+        color:#34495E;
+      }
+
+      .lynch {
+        color: #6C7A89;
+      }
+
+      .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+        color: #fff;
+        background-color: #48c9b0;
+        border-color: #48c9b0;
+      }
+
+
+      .btn-primary {
+        color: #fff;
+        background-color: #1abc9c;
+      }
+      .btn{
+        border: none;
+      }
+
+      .btn-outline.btn-sm{
+        color: #34495E;
+      }
+      .btn-outline.btn-sm:hover{
+        color: #34495E;
+      }
