@@ -8,7 +8,7 @@ namespace PatrickSullivanWebSite.Models
     public class LogEntry
     {
         public string Message { get; set; }
-        public string Details { get; set; }
+        public object Details { get; set; }
         public string Date { get; set; }
         public string Source { get; set; }
 

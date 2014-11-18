@@ -11,7 +11,7 @@ using PatrickSullivanWebSite.Models;
 
 namespace PatrickSullivanWebSite.Controllers
 {
-    [EnableCors(origins: "http://www.pdsullivan.com, http://blog.pdsullivan.com, http://localhost:4000", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://www.pdsullivan.com, http://blog.pdsullivan.com", headers: "*", methods: "*")]
     public class LoggingController : ApiController
     {
         BiggyList<LogEntry> Log = Global.SiteDB.LogEntryList;
@@ -20,6 +20,7 @@ namespace PatrickSullivanWebSite.Controllers
 
         // POST api/logging
         [HttpPost]
+        [Route("api/logging")]
         public IHttpActionResult Post(LogEntry value)
         {
             value.Date = DateTime.UtcNow.ToString();
