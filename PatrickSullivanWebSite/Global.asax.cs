@@ -18,6 +18,7 @@ namespace PatrickSullivanWebSite
         public BiggyList<LogEntry> LogEntryList;
         public BiggyList<LogEntry> BlogLogEntryList;
         public BiggyList<LogEntry> ArchiveLogList;
+        public BiggyList<ErrorLogItem> ErrorLogList;
         public SiteDB()
         {
 
@@ -27,91 +28,8 @@ namespace PatrickSullivanWebSite
             BlogLogEntryList = new BiggyList<LogEntry>(dbPath: HttpRuntime.AppDomainAppPath, dbName: "blogLog");
             ArchiveLogList = new BiggyList<LogEntry>(dbPath: HttpRuntime.AppDomainAppPath, dbName: "archiveLog");
 
-            #region adding links
+            ErrorLogList = new BiggyList<ErrorLogItem>(dbPath: HttpRuntime.AppDomainAppPath, dbName: "errorLogList");
 
-            //adding links test
-            if (Links.Count <  1)
-            {
-               Links.Add( new Link()
-               {
-                   Url = "http://9to5mac.com/" , 
-                   Type = "link" ,
-                   Desc = "9to5Mac", 
-                   Text = " Apple Intelligence"
-               });
-
-               Links.Add(new Link()
-               {
-                   Url = "http://blog.stackexchange.com/", 
-                   Type = "link" , 
-                   Desc = "StackExchange Blog"
-               });
-
-                Links.Add(new Link()
-                {
-                    Url = "https://github.com/pdsullivan",
-                    Desc = "My Github Account",
-                    Type = "link", 
-                    Text = " (Not much on there at the moment)"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "http://webdevchecklist.com/",
-                    Desc = "Web Development Checklist",
-                    Type = "dev"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "http://sidewaffle.com/",
-                    Desc = "SideWaffle",
-                    Type = "dev"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "http://dotnetrocks.com/",
-                    Desc = ".Net Rocks",
-                    Type = "podcast"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "http://hanselminutes.com/",
-                    Desc = "Hanselminutes",
-                    Type = "podcast",
-                    Text = " by ",
-                    Author = "Scott Hanselman",
-                    AuthorUrl = "http://www.hanselman.com/"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "https://itunes.apple.com/us/podcast/id393751871",
-                    Desc = "Yet Another Podcast",
-                    Text = " by ",
-                    Author = "Jesse Liberty",
-                    AuthorUrl = "https://jesseliberty.com/",
-                    Type = "podcast"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "http://blog.stackoverflow.com/category/podcasts/",
-                    Desc = "StackExchange Podcast",
-                    Type = "podcast"
-                });
-
-                Links.Add(new Link()
-                {
-                    Url = "http://herdingcode.com/",
-                    Desc = "Herding Code Podcast",
-                    Type = "podcast"
-                });
-            }
-
-            #endregion
         }
     }
     

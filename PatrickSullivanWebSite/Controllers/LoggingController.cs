@@ -11,7 +11,10 @@ using PatrickSullivanWebSite.Models;
 
 namespace PatrickSullivanWebSite.Controllers
 {
-    [EnableCors(origins: "http://www.pdsullivan.com, http://blog.pdsullivan.com", headers: "*", methods: "*")]
+    [EnableCors(
+        origins: "http://www.pdsullivan.com, http://blog.pdsullivan.com", 
+        headers: "*", 
+        methods: "*")]
     public class LoggingController : ApiController
     {
         BiggyList<LogEntry> Log = Global.SiteDB.LogEntryList;
@@ -23,7 +26,7 @@ namespace PatrickSullivanWebSite.Controllers
         [Route("api/logging")]
         public IHttpActionResult Post(LogEntry value)
         {
-            value.Date = DateTime.UtcNow.ToString();
+            value.Date = DateTime.Now.ToString();
             Log.Add(value);
             return Ok();
         }
@@ -56,7 +59,7 @@ namespace PatrickSullivanWebSite.Controllers
         [Route("api/blogLog")]
         public IHttpActionResult BlogLog(LogEntry value)
         {
-            value.Date = DateTime.UtcNow.ToString();
+            value.Date = DateTime.Now.ToString();
             BlogLogs.Add(value);
             return Ok();
         }
@@ -74,7 +77,7 @@ namespace PatrickSullivanWebSite.Controllers
         [HttpGet]
         public IHttpActionResult GetLogging()
         {
-            var logitems = Log.Where(x =>Convert.ToDateTime(x.Date) > DateTime.UtcNow.AddDays(-5)).ToList();
+            var logitems = Log.Where(x =>Convert.ToDateTime(x.Date) > DateTime.Now.AddDays(-5)).ToList();
             return Ok(logitems);
         }
 
@@ -91,7 +94,7 @@ namespace PatrickSullivanWebSite.Controllers
         [HttpGet]
         public IHttpActionResult GetBlogLogging()
         {
-            var logitems = BlogLogs.Where(x => Convert.ToDateTime(x.Date) > DateTime.UtcNow.AddDays(-5)).ToList();
+            var logitems = BlogLogs.Where(x => Convert.ToDateTime(x.Date) > DateTime.Now.AddDays(-5)).ToList();
             return Ok(logitems);
         }
 

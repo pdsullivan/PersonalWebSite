@@ -200,6 +200,7 @@
     <Compile Include="AppStart\WebApiConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DevLinksController.cs" />
+    <Compile Include="Controllers\ErrorLogController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\LoggingController.cs" />
     <Compile Include="Controllers\PodcastsController.cs" />
@@ -207,6 +208,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactInfo.cs" />
+    <Compile Include="Models\ErrorLogItem.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\LogEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
