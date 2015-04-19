@@ -47,9 +47,9 @@ hr {
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-    color: gray;
-    background-color: white;
-    border-color: white;
+    color: white;
+    /*background-color: white;*/
+    /*border-color: white;*/
 }
 
 
@@ -87,7 +87,7 @@ a {
     text-decoration: underline;
 }
 a.btn {
-    color:gray;
+    color: white;
     text-decoration: none;
 }
 
