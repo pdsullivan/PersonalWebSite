@@ -1,25 +1,11 @@
 ﻿
-
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #6AAD7B;
 }
-body{
-    position:relative;
-    background: url('coffee.jpeg') no-repeat center center fixed;-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;width:100%;height:100%;margin:0
-}
-body:after{
-    position:fixed;
-    content:"";
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:rgba(0, 0, 0, 0.67);
-    z-index:-1;
+.btn-outline.btn-sm:hover {
+    color: #7D7D7D;
+    background-color: white;
 }
 #mainContent{
     margin-top: 7%;
@@ -34,10 +20,6 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#mainDisplay {
-    background-color: #34495E;
-}
-
 .gallery{
     color:#34495E;
 }
@@ -48,8 +30,6 @@ hr {
 
 .btn-primary, .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
     color: white;
-    /*background-color: white;*/
-    /*border-color: white;*/
 }
 
 
@@ -59,9 +39,6 @@ hr {
 }
 
 .btn-outline.btn-sm{
-    color:white;
-}
-.btn-outline.btn-sm:hover{
     color:white;
 }
 
@@ -100,4 +77,12 @@ a.btn {
     .container {
         margin-top: 10%;
     }
+}
+
+.btn.btn-primary.btn-lg.main-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    color: #7D7D7D;
+    font-weight: bold;
 }
