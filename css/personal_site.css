@@ -3,13 +3,23 @@
 }
 
 a {
-    color: #9A9A9A;
+    color:#606c76;
+    text-decoration: underline;
+}
+a:hover {
+    color: #606c76;
     text-decoration: underline;
 }
 
 a.button.button-clear {
-    color: #9A9A9A;
+    color: #606c76;
     background-color: transparent;
+    font-size: 17px;
+    padding: 10px;
+}
+
+a.button.button-clear:hover {
+    color: #276ca5;
 }
 
 div.text-area {
