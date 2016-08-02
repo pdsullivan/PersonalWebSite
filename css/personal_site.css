@@ -1,11 +1,21 @@
 @font-face {
       font-family: "Hack Regular";
       src: url("Hack-Regular.ttf");
-    }
+}
+
 html {
     background-color: #31343f;
 
 }
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
 body{
     color: #abb2c0;
     padding: 0px 10px;
@@ -13,6 +23,7 @@ body{
 }
 
 .text-center {
+    transition: all .2s ease-in-out;
     text-align: center;
 }
 
@@ -33,7 +44,7 @@ a.button.button-clear, a.button.button-clear:visited {
 }
 
 a.button.button-clear:hover {
-    color: #97c378;
+    color: #abb2c0;
 }
 
 div.text-area {
