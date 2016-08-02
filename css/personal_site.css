@@ -1,3 +1,7 @@
+@font-face {
+      font-family: "Hack Regular";
+      src: url("Hack-Regular.ttf");
+    }
 html {
     background-color: #31343f;
 
@@ -5,6 +9,7 @@ html {
 body{
     color: #abb2c0;
     padding: 0px 10px;
+    font-family: "Hack Regular"
 }
 
 .text-center {
